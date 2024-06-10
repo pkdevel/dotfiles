@@ -5,6 +5,46 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Aliases
+alias l='ls -l --color=auto'
+alias ll='ls -la --color=auto'
+alias ld='ls -ld --color=auto'
+alias lld='ls -lda --color=auto'
+alias vim='nvim'
+alias gs='git status'
+alias gup='git pull --rebase --autostash'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+reload() {
+  source ~/.zprofile
+  source ~/.zshrc
+  clear
+}
+
+# Shell integrations
+if command -v fzf &> /dev/null; then
+  eval "$(fzf --zsh)"
+else
+  echo "fzf not found"
+fi
+
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init --cmd cd zsh)"
+else
+  echo "zoxide not found"
+fi
+
+export ZSH_DISABLE_COMPFIX
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+# use oh-my-posh
+# export OH_MY_POSH
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
