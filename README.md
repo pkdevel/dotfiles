@@ -3,7 +3,6 @@
 > link dotfiles
 
 ```
-    ~/dotfiles/
-    stow .
+    stow --no-folding . (--restow)
 ```
 
