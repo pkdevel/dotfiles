@@ -20,7 +20,7 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 reload() {
-  source ~/.zshrc || exit 1
+  source ~/.zshrc
   clear
 }
 
@@ -38,8 +38,6 @@ else
 fi
 
 export ZSH_DISABLE_COMPFIX
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
 
 # use oh-my-posh
 # export OH_MY_POSH
