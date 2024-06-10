@@ -1,0 +1,78 @@
+#import = ["~/.config/alacritty/themes/themes/afterglow.toml"]
+#import = ["~/.config/alacritty/themes/dracula.toml"]
+import = ["~/.config/alacritty/themes/tokyo-night-storm.toml"]
+
+live_config_reload = true
+
+#[shell]
+#program = "/bin/zsh"
+#args = [ "-L", "-c", "tmux attach -t 'copium' || tmux new -s 'copium'" ]
+
+[window]
+dimensions = { columns = 160, lines = 40 }
+opacity = 0.8
+padding = { x = 7, y = 5 }
+dynamic_padding = true
+decorations = "Buttonless"
+resize_increments = true
+blur = true
+dynamic_title = false
+
+[font]
+#normal = { family = "MesloLGS NF", style = "Regular" }
+#normal = { family = "SFMono Nerd Font", style = "Medium" }
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Medium" }
+size = 15
+
+[selection]
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true
+bindings = [
+    { mouse = "Middle", mode = "~Vi",           action = "PasteSelection" },
+]
+
+[keyboard]
+bindings = [
+    #{ key = "T",       mods = "Command",       action = "None" },
+    #{ key = "W",       mods = "Command",       action = "None" },
+    #{ key = "N",       mods = "Command",       action = "CreateNewWindow" },
+
+    #{ key = "Left",    mods = "Command",      action = "SelectPreviousTab" },
+    #{ key = "Right",   mods = "Command",      action = "SelectNextTab" },
+
+    { key = "Enter",    mods = "Command|Control", action = "ToggleSimpleFullscreen" },
+    { key = "Enter",    mods = "Command|Shift",   action = "ToggleFullscreen" },
+    { key = "Enter",    mods = "Command",           action = "ToggleMaximized" },
+
+    { key = "Left",     mods = "Alt",           chars = "\u001BB" },
+    { key = "Right",    mods = "Alt",           chars = "\u001BF" },
+
+    { key = "Left",     mods = "Shift",         action = "None" },
+    { key = "Right",    mods = "Shift",         action = "None" },
+    { key = "Up",       mods = "Shift",         action = "None" },
+    { key = "Down",     mods = "Shift",         action = "None" },
+    { key = "Up",       mods = "Alt",           action = "None" },
+    { key = "Down",     mods = "Alt",           action = "None" },
+    { key = "Up",       mods = "Command",       action = "None" },
+    { key = "Down",     mods = "Command",       action = "None" },
+    { key = "Up",       mods = "Control",       action = "None" },
+
+    #{ key = "W",        mods = "Command|Shift", chars = "\u0002&" },  # close tab (kill)
+    #{ key = "Right",    mods = "Command|Shift", chars = "\u0002n" },  # select next tab
+    #{ key = "Left",     mods = "Command|Shift", chars = "\u0002p" },  # select previous tab
+    #{ key = "Right",    mods = "Command",       chars = "\u0002o" },  # select next pane
+    #{ key = "Left",     mods = "Command",       chars = "\u0002;" },  # select last (previously used) pane
+
+    { key = "Left",     mods = "Command",       chars = "\u001B[1;5D" },       # cmd+left        -> ctrl+left
+    { key = "Right",    mods = "Command",       chars = "\u001B[1;5C" },       # cmd+right       -> ctrl+right
+    { key = "Left",     mods = "Command|Shift", chars = "\u001B[1;6D" },       # cmd+shift+left  -> ctrl+shift+left
+    { key = "Right",    mods = "Command|Shift", chars = "\u001B[1;6C" },       # cmd+shift+right -> ctrl+shift+right
+    { key = "T",        mods = "Command",       chars = "\u0002c" },           # cmd+t           -> ctrl+a c
+    { key = "W",        mods = "Command",       chars = "\u0002x" },           # cmd+w           -> ctrl+a x
+    { key = "D",        mods = "Command",       chars = "\u0002|" },           # cmd+d           -> ctrl+a |
+    { key = "D",        mods = "Command|Shift", chars = "\u0002-" },           # cmd+shift+d     -> ctrl+a -
+    { key = "F",        mods = "Command",       chars = "\u0002\\" },          # cmd+f           -> ctrl+a \
+    { key = "K",        mods = "Command",       chars = "\u000b" },            # cmd+k           -> ctrl+k
+]
