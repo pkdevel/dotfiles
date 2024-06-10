@@ -20,7 +20,7 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 reload() {
-  source ~/.zshrc
+  source ~/.zshrc || exit 1
   clear
 }
 
