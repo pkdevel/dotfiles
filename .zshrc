@@ -10,7 +10,6 @@ alias l='ls -l --color=auto'
 alias ll='ls -la --color=auto'
 alias ld='ls -ld --color=auto'
 alias lld='ls -lda --color=auto'
-alias vim='nvim'
 alias gs='git status'
 alias gup='git pull --rebase --autostash'
 alias ..='cd ..'
@@ -18,6 +17,12 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
+
+if command -v nvim &> /dev/null; then
+  alias vim='nvim'
+else
+  echo "neovim not found"
+fi
 
 reload() {
   source ~/.zshrc
