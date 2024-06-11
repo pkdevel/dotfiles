@@ -20,8 +20,10 @@ alias ......='cd ../../../../..'
 
 if command -v nvim &> /dev/null; then
   alias vim='nvim'
+  export EDITOR=nvim
 else
   echo "neovim not found"
+  export EDITOR=vim
 fi
 
 reload() {
@@ -116,10 +118,6 @@ setopt hist_find_no_dups
 
 # Use emacs key bindings
 bindkey -e
-
-# bindkey '^p' history-search-backward
-# bindkey '^n' history-search-forward
-# bindkey '^[w' kill-region
 bindkey -s '\el' 'ls -lah\n'
 
 # Start typing + [Up-Arrow] - fuzzy find history forward
