@@ -115,6 +115,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Keybindings
+unsetopt flow_control
 
 # Use emacs key bindings
 bindkey -e
