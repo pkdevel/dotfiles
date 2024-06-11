@@ -4,9 +4,9 @@ import = ["~/.config/alacritty/themes/tokyo-night-storm.toml"]
 
 live_config_reload = true
 
-#[shell]
-#program = "/bin/zsh"
-#args = [ "-L", "-c", "tmux attach -t 'copium' || tmux new -s 'copium'" ]
+[shell]
+program = "/bin/zsh"
+args = [ "-l", "-c", "tmux attach -t 'copium' || tmux new -s 'copium'" ]
 
 [window]
 dimensions = { columns = 160, lines = 40 }
