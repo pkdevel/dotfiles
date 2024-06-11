@@ -112,6 +112,26 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+# Keybindings
+
+# Use emacs key bindings
+bindkey -e
+
+# bindkey '^p' history-search-backward
+# bindkey '^n' history-search-forward
+# bindkey '^[w' kill-region
+bindkey -s '\el' 'ls -lah\n'
+
+# Start typing + [Up-Arrow] - fuzzy find history forward
+autoload -U up-line-or-beginning-search
+zle -N up-line-or-beginning-search
+bindkey -M emacs "^[[A" up-line-or-beginning-search
+
+# Start typing + [Down-Arrow] - fuzzy find history backward
+autoload -U down-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey -M emacs "^[[B" down-line-or-beginning-search
+
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
