@@ -4,6 +4,18 @@
     git submodule update
 ```
 
+# optional binaries
+> zsh
+```
+zoxide
+fzf
+brew (mac)
+```
+>neovim
+```
+treesitter-cli
+```
+
 # stow
 
 > link dotfiles
