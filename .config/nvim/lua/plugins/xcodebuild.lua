@@ -52,8 +52,11 @@ return {
       },
     }
 
+    local get_icon = require("astroui").get_icon
     -- stylua: ignore start
     vim.keymap.set("n", "<leader>X", "<cmd>XcodebuildPicker<cr>", { desc = "Show Xcodebuild Actions" })
+
+    vim.keymap.set("n", "<leader>x", "", { desc = get_icon("Environment", 1, false) .. "Xcodebuild" })
     vim.keymap.set("n", "<leader>xf", "<cmd>XcodebuildProjectManager<cr>", { desc = "Show Project Manager Actions" })
 
     vim.keymap.set("n", "<leader>xb", "<cmd>XcodebuildBuild<cr>", { desc = "Build Project" })
