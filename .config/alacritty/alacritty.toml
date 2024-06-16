@@ -6,7 +6,7 @@ live_config_reload = true
 
 [shell]
 program = "/bin/zsh"
-args = [ "-l", "-c", "tmux attach -t 'copium' || tmux new -s 'copium'" ]
+args = ["-l", "-c", "tmux attach -t '🚀 copium ' || tmux new -s '🚀 copium '"]
 
 [window]
 dimensions = { columns = 160, lines = 40 }
