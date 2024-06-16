@@ -1,26 +1,40 @@
 # git
-```
-    git submodule init
-    git submodule update
+
+```bash
+git submodule init
+git submodule update
 ```
 
-# optional binaries
+# additional binaries
+
 > zsh
-```
+
+```bash
 zoxide
 fzf
 brew (mac)
 ```
->neovim
-```
+
+> neovim
+
+```bash
 treesitter-cli
+```
+
+> xcodebuild.nvim
+
+```bash
+brew install xcode-build-server
+brew install xcbeautify
+brew install ruby
+gem install xcodeproj
+python3 -m pip install -U pymobiledevice3
 ```
 
 # stow
 
 > link dotfiles
 
+```bash
+stow --no-folding . (--restow)
 ```
-    stow --no-folding . (--restow)
-```
-
