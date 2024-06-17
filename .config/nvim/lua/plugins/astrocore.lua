@@ -18,6 +18,9 @@ return {
         -- Navigate tabs
         ["<C-Tab>"] = { function() vim.cmd.tabnext() end, desc = "Next tab" },
         ["<C-S-Tab>"] = { function() vim.cmd.tabprevious() end, desc = "Previous tab" },
+
+        -- local rename
+        ["gR"] = { "gd[{V%::s/<C-R>///gc<left><left><left>", desc = "Rename symbol in scope" },
       },
     },
   },
