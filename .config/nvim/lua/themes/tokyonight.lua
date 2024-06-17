@@ -1,6 +1,7 @@
 ---@type LazySpec
 return {
-  "folke/tokyonight.nvim",
+  "tokyonight.nvim",
+  lazy = true,
   priority = 1000,
   opts = {
     style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
