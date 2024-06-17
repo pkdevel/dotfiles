@@ -3,6 +3,7 @@ return {
   -- Custom Parameters (with defaults)
   {
     "David-Kunz/gen.nvim",
+    cmd = "Gen",
     opts = {
       model = "mistral", -- The default model to use.
       host = "mintz", -- The host running the Ollama service.
@@ -18,7 +19,8 @@ return {
           .. options.host
           .. ":"
           .. options.port
-          .. "/api/chat -d $body"
+          .. "/api/chat -d "
+          .. body
       end,
       -- The command for the Ollama service. You can use placeholders $prompt, $model and $body (shellescaped).
       -- This can also be a command string.
