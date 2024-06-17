@@ -44,6 +44,12 @@ else
   echo "zoxide not found"
 fi
 
+if command -v thefuck &> /dev/null; then
+  eval $(thefuck --alias)
+else
+  echo "thefuck not found"
+fi
+
 export ZSH_DISABLE_COMPFIX
 
 # use oh-my-posh
