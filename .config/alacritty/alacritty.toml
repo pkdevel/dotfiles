@@ -9,8 +9,8 @@ program = "/bin/zsh"
 args = ["-l", "-c", "tmux attach -t '🚀 copium ' || tmux new -s '🚀 copium '"]
 
 [window]
-dimensions = { columns = 160, lines = 40 }
-opacity = 0.9
+dimensions = { columns = 187, lines = 42 }
+opacity = 0.75
 padding = { x = 1, y = 1 }
 dynamic_padding = false
 decorations = "Buttonless"
