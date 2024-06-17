@@ -6,12 +6,11 @@ return {
   dependencies = {
     "nvim-telescope/telescope.nvim",
     "MunifTanjim/nui.nvim",
-    "nvim-neo-tree/neo-tree.nvim",
-    "nvim-treesitter/nvim-treesitter",
   },
+  ft = "swift",
   config = function()
     require("xcodebuild").setup {
-      show_build_progress_bar = false,
+      show_build_progress_bar = true,
       logs = {
         auto_open_on_success_tests = false,
         auto_open_on_failed_tests = false,
@@ -52,8 +51,8 @@ return {
       },
     }
 
-    local get_icon = require("astroui").get_icon
     -- stylua: ignore start
+    local get_icon = require("astroui").get_icon
     vim.keymap.set("n", "<leader>X", "<cmd>XcodebuildPicker<cr>", { desc = "Show Xcodebuild Actions" })
 
     vim.keymap.set("n", "<leader>x", "", { desc = get_icon("Environment", 1, false) .. "Xcodebuild" })
