@@ -6,17 +6,32 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Aliases
-alias l='ls -l --color=auto'
-alias ll='ls -la --color=auto'
-alias ld='ls -ld --color=auto'
-alias lld='ls -lda --color=auto'
+alias ls='ls -h --color=auto'
+alias l='ls -l'
+alias ll='ls -la'
+alias ld='ls -ld'
+alias lld='ls -lda'
+
 alias gs='git status'
 alias gup='git pull --rebase --autostash'
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
+
+reload() {
+  source ~/.zshrc
+  clear
+}
+
+# Shell integrations
+if command -v eza &> /dev/null; then
+  alias ls='eza --icons=auto --color=auto --git -stype'
+else
+  echo "eza not found"
+fi
 
 if command -v nvim &> /dev/null; then
   alias vim='nvim'
@@ -26,12 +41,6 @@ else
   export EDITOR=vim
 fi
 
-reload() {
-  source ~/.zshrc
-  clear
-}
-
-# Shell integrations
 if command -v fzf &> /dev/null; then
   eval "$(fzf --zsh)"
 else
@@ -98,8 +107,6 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 if [[ -v OH_MY_POSH ]]; then
-  # eval "$(oh-my-posh init zsh)"
-  # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/jandedobbeleer.omp.json)"
   eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/atomic.omp.json)"
 else
   # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
