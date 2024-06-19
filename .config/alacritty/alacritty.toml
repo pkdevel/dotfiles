@@ -19,8 +19,9 @@ blur = true
 dynamic_title = false
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font", style = "Medium" }
+normal = { family = "JetBrainsMono Nerd Font", style = "Light" }
 size = 15
+builtin_box_drawing = false
 
 [selection]
 save_to_clipboard = true
