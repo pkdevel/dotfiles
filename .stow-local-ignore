@@ -1,6 +1,10 @@
 .DS_Store
 .*\.rayconfig
 Brewfile
+Makefile
+Dockerfile
+
+\.dockerignore
 
 RCS
 .+,v
