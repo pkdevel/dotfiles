@@ -1,8 +1,8 @@
-FROM alpine:3
+FROM alpine:3 AS build
 
 ARG USER
 RUN adduser -D $USER && \
-    apk add --no-cache zsh ca-certificates git curl stow fzf neovim eza zoxide tree-sitter-cli go clang npm
+    apk add --no-cache zsh bash tmux ca-certificates curl git stow fzf eza zoxide neovim tree-sitter-cli go npm clang
 
 USER $USER
 COPY . /dotfiles
