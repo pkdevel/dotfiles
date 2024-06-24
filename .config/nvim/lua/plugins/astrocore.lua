@@ -9,7 +9,7 @@ return {
         cwd = true, -- auto save session for each working directory
       },
       ignore = {
-        dirs = { "~/Downloads", "~/Documents", "~/Desktop", "~/" }, -- working directories to ignore sessions in
+        dirs = { "~/Downloads", "~/Documents", "~/Desktop", "~" }, -- working directories to ignore sessions in
         filetypes = { "gitcommit", "gitrebase" }, -- filetypes to ignore sessions
         buftypes = {}, -- buffer types to ignore sessions
       },
