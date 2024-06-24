@@ -62,6 +62,7 @@ else
 fi
 
 export ZSH_DISABLE_COMPFIX
+export LESS='--mouse'
 
 # use oh-my-posh
 # export OH_MY_POSH
