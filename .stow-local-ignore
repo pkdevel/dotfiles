@@ -3,7 +3,6 @@
 Brewfile
 Makefile
 Dockerfile
-
 \.dockerignore
 
 RCS
@@ -24,6 +23,10 @@ _darcs
 .+~          # emacs backup files
 \#.*\#       # emacs autosave files
 
+doc
+macos
+
+.*\.md
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
