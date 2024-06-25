@@ -25,7 +25,7 @@ reload() {
   source $HOME/.zshenv 2> /dev/null
   source $HOME/.zprofile 2> /dev/null
   source ${ZDOTDIR:-$HOME}/.zshrc 2> /dev/null
-  clear
+  reset
 }
 
 # Shell integrations
