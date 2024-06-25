@@ -21,7 +21,7 @@ dynamic_title = false
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Medium" }
 size = 15
-builtin_box_drawing = false
+builtin_box_drawing = true
 
 [selection]
 save_to_clipboard = true
