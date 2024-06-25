@@ -17,6 +17,7 @@ decorations = "Buttonless"
 resize_increments = true
 blur = true
 dynamic_title = false
+option_as_alt = "Both"
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Medium" }
@@ -45,6 +46,8 @@ bindings = [
     { key = "7", mods = "Command", chars = "\u00187" },             # <C-x 7> goto tmux window 6
     { key = "8", mods = "Command", chars = "\u00188" },             # <C-x 8> goto tmux window 7
     { key = "9", mods = "Command", chars = "\u00189" },             # <C-x 9> goto tmux window 8
-    { key = "Tab", mods = "Control", chars = "\u001b[9;5u" },
-    { key = "Tab", mods = "Control|Shift", chars = "\u001b[9;6u" },
+    { key = "Tab", mods = "Control", chars = "\u001b[9;5u" },       # C-Tab for neovim tabs
+    { key = "Tab", mods = "Control|Shift", chars = "\u001b[9;6u" }, # C-Tab for neovim tabs
+    { key = "l", mods = "Option", chars = "@" },                    # restore keybinds after option_as_alt = "Both"
+    { key = "n", mods = "Option", chars = "~" },                    # restore keybinds after option_as_alt = "Both"
 ]
