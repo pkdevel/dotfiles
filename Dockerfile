@@ -6,7 +6,7 @@ RUN adduser -D $USER && \
 
 USER $USER
 COPY . /dotfiles
-RUN stow . -v --no-folding -d /dotfiles -t /home/$USER 
+RUN stow . --no-folding -d /dotfiles -t /home/$USER 
 
 WORKDIR /home/$USER 
 CMD ["/bin/zsh", "-l"]
