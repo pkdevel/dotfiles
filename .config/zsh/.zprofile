@@ -1,13 +1,19 @@
 # Shell integrations
-source ~/.py_default/bin/activate
-
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  export HOMEBREW_AUTO_UPDATE_SECS=86400
-  export HOMEBREW_NO_ENV_HINTS=true
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ -d "~/.py_default" ]; then
+  source ~/.py_default/bin/activate
 fi
 
-if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+if [ -d "/opt/homebrew" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  export HOMEBREW_AUTO_UPDATE_SECS=86400
+  export HOMEBREW_NO_ENV_HINTS=true
+elif [ -d "~/.linuxbrew" ]; then
+  eval "$(~/.linuxbrew/bin/brew shellenv)"
+elif [ -d "/home/linuxbrew" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+if [ -d "/opt/homebrew/opt/ruby" ]; then
   export PATH=/opt/homebrew/opt/ruby/bin:$PATH
   export PATH=`gem environment gemdir`/bin:$PATH
 
@@ -19,12 +25,22 @@ if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
   export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 fi
 
-# TODO: fix this
-export PATH=$HOME/.local/bin:$PATH
+if command -v nvim &> /dev/null; then
+  alias vim="nvim"
+  export EDITOR=nvim
+elif command -v vim &> /dev/null; then
+  export EDITOR=vim
+else
+  export EDITOR=vi
+fi
 
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-export OLLAMA_HOST="mintz:11434"
+if command -v ollama &> /dev/null; then
+  export OLLAMA_HOST="mintz:11434"
+fi
 
-# if [ -f "$HOME/.config/fabric/fabric-bootstrap.inc" ]; then . "$HOME/.config/fabric/fabric-bootstrap.inc"; fi
+# use oh-my-posh
+# export OH_MY_POSH
+export LESS="--mouse -R"
+export LANG="C.UTF-8"
+export LC_ALL="C"
 
