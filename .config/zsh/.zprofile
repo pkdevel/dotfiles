@@ -7,6 +7,7 @@ if [ -d "/opt/homebrew" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export HOMEBREW_AUTO_UPDATE_SECS=86400
   export HOMEBREW_NO_ENV_HINTS=true
+  export HOMEBREW_NO_ANALYTICS=1
 elif [ -d "~/.linuxbrew" ]; then
   eval "$(~/.linuxbrew/bin/brew shellenv)"
 elif [ -d "/home/linuxbrew" ]; then
