@@ -37,3 +37,8 @@
 	cd ~/dotfiles
 	stow . --no-folding
 	```
+5. (optional) link yabai module
+	```sh
+	cd ~/dotfiles
+	stow yabai --no-folding
+	```

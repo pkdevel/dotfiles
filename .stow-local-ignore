@@ -5,6 +5,11 @@ Makefile
 Dockerfile
 \.dockerignore
 
+doc
+macos
+
+yabai
+
 RCS
 .+,v
 
@@ -22,9 +27,6 @@ _darcs
 
 .+~          # emacs backup files
 \#.*\#       # emacs autosave files
-
-doc
-macos
 
 .*\.md
 ^/README.*
