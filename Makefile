@@ -10,3 +10,7 @@ _docker-run:
 test: _docker _docker-run
 test-zsh: _docker-userland _docker-run
 
+clean:
+	docker image prune --filter label=name=dotfiles --force --all
+	docker builder prune --force
+

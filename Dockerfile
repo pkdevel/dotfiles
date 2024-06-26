@@ -1,4 +1,5 @@
 FROM alpine:3 as zsh
+LABEL name="dotfiles"
 RUN apk add --no-cache ca-certificates curl git zsh fzf eza zoxide
 
 FROM zsh as userland
