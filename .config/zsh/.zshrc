@@ -1,3 +1,7 @@
+# load all init scripts
+export ZSH_DISABLE_COMPFIX
+for source in $ZDOTDIR/source.d/*.zsh; source $source
+
 # Shell integrations
 # TODO: install with zinit
 if command -v eza &> /dev/null; then
@@ -23,10 +27,6 @@ if command -v thefuck &> /dev/null; then
 else
   echo "thefuck not found"
 fi
-
-# load all init scripts
-export ZSH_DISABLE_COMPFIX
-for source in $ZDOTDIR/source.d/*.zsh; source $source
 
 # History
 HISTSIZE=5000
