@@ -42,6 +42,4 @@ fi
 # use oh-my-posh
 # export OH_MY_POSH
 export LESS="--mouse -R"
-export LANG="C.UTF-8"
-export LC_ALL="C.UTF-8"
 
