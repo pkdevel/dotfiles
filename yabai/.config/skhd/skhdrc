@@ -1,11 +1,15 @@
 # open/focus terminal
 cmd + shift - return : open /Applications/Alacritty.app
 
+# fast focus desktop
+cmd - left  : yabai -m space --focus prev
+cmd - right : yabai -m space --focus next
+
 # focus window
-alt - left  : yabai -m window --focus west
-alt - right : yabai -m window --focus east
-alt - up    : yabai -m window --focus north
-alt - down  : yabai -m window --focus south
+shift + cmd - left  : yabai -m window --focus west
+shift + cmd - right : yabai -m window --focus east
+shift + cmd - up    : yabai -m window --focus north
+shift + cmd - down  : yabai -m window --focus south
 
 # move managed window
 ctrl + alt - left  : yabai -m window --warp west
@@ -22,6 +26,20 @@ shift + ctrl + alt - down  : yabai -m window --swap south
 # balance size of windows
 shift + alt - return : yabai -m space --balance
 
+# switch layouts
+alt - s : yabai -m space --layout stack
+alt - w : yabai -m space --layout bsp
+
+# rotate tree
+alt - r : yabai -m space --rotate 90
+
+# toggle window zoom
+alt - d : yabai -m window --toggle zoom-parent
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# toggle window split type
+alt - e : yabai -m window --toggle split
+
 # make floating window fill screen
 # shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
 
@@ -33,10 +51,6 @@ shift + alt - return : yabai -m space --balance
 #                   index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
 #                   yabai -m window --space "${index}" && \
 #                   yabai -m space --focus "${index}"
-
-# fast focus desktop
-cmd - left  : yabai -m space --focus prev
-cmd - right : yabai -m space --focus next
 
 # send window to desktop and follow focus
 # shift + cmd - z : yabai -m window --space next; yabai -m space --focus next
@@ -64,13 +78,6 @@ shift + ctrl - up   : yabai -m window --resize bottom:0:-20
 
 # set insertion point in focused container
 # ctrl + alt - h : yabai -m window --insert west
-
-# toggle window zoom
-alt - d : yabai -m window --toggle zoom-parent
-alt - f : yabai -m window --toggle zoom-fullscreen
-
-# toggle window split type
-alt - e : yabai -m window --toggle split
 
 # float / unfloat window and center on screen
 shift + alt - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
