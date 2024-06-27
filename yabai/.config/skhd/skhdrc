@@ -99,3 +99,7 @@ shift + alt - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # toggle sticky(+float), picture-in-picture
 alt - p : yabai -m window --toggle sticky --toggle pip
+
+# Toggle sketchybar
+shift + ctrl - space : sketchybar --bar hidden=toggle
+
