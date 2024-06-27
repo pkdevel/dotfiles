@@ -2,7 +2,7 @@
 - to run everything inside a docker container
 `make test`
 - to just run zsh inside a docker container
-`make test`
+`make test-zsh`
 
 # Usage
 1. clone the repo into home folder
