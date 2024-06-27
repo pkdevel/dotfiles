@@ -1,9 +1,19 @@
 # open/focus terminal
 cmd + shift - return : open /Applications/Alacritty.app
 
-# fast focus desktop
+# restart yabai
+shift + ctrl + cmd - r : yabai --restart-service
+
+# fast focus space
 cmd - left  : yabai -m space --focus prev
 cmd - right : yabai -m space --focus next
+
+# focus space
+ctrl + cmd - 1 : yabai -m space --focus 1
+ctrl + cmd - 2 : yabai -m space --focus 2
+ctrl + cmd - 3 : yabai -m space --focus 3
+ctrl + cmd - 4 : yabai -m space --focus 4
+ctrl + cmd - 5 : yabai -m space --focus 5
 
 # focus window
 shift + cmd - left  : yabai -m window --focus west
@@ -11,24 +21,32 @@ shift + cmd - right : yabai -m window --focus east
 shift + cmd - up    : yabai -m window --focus north
 shift + cmd - down  : yabai -m window --focus south
 
+# focus stacked windows
+shift + cmd - home : yabai -m window --focus stack.prev
+shift + cmd - end  : yabai -m window --focus stack.next
+
 # move managed window
-ctrl + alt - left  : yabai -m window --warp west
-ctrl + alt - right : yabai -m window --warp east
-ctrl + alt - up    : yabai -m window --warp north
-ctrl + alt - down  : yabai -m window --warp south
+ctrl + cmd - left  : yabai -m window --warp west
+ctrl + cmd - right : yabai -m window --warp east
+ctrl + cmd - up    : yabai -m window --warp north
+ctrl + cmd - down  : yabai -m window --warp south
 
 # swap managed window
-shift + ctrl + alt - left  : yabai -m window --swap west
-shift + ctrl + alt - right : yabai -m window --swap east
-shift + ctrl + alt - up    : yabai -m window --swap north
-shift + ctrl + alt - down  : yabai -m window --swap south
+shift + ctrl + cmd - left  : yabai -m window --swap west
+shift + ctrl + cmd - right : yabai -m window --swap east
+shift + ctrl + cmd - up    : yabai -m window --swap north
+shift + ctrl + cmd - down  : yabai -m window --swap south
 
 # balance size of windows
-shift + alt - return : yabai -m space --balance
+ctrl + cmd - return : yabai -m space --balance
+
+# center window
+ctrl + alt - c : yabai -m window --grid 4:4:1:1:2:2
 
 # switch layouts
 alt - s : yabai -m space --layout stack
 alt - w : yabai -m space --layout bsp
+alt - x : yabai -m space --layout float
 
 # rotate tree
 alt - r : yabai -m space --rotate 90
@@ -53,8 +71,13 @@ alt - e : yabai -m window --toggle split
 #                   yabai -m space --focus "${index}"
 
 # send window to desktop and follow focus
-# shift + cmd - z : yabai -m window --space next; yabai -m space --focus next
-# shift + cmd - 2 : yabai -m window --space  2; yabai -m space --focus 2
+shift + ctrl + cmd - z : yabai -m window --space prev --focus; yabai -m space --focus prev
+shift + ctrl + cmd - y : yabai -m window --space next --focus; yabai -m space --focus next
+shift + ctrl + cmd - 1 : yabai -m window --space 1    --focus; yabai -m space --focus 1
+shift + ctrl + cmd - 2 : yabai -m window --space 2    --focus; yabai -m space --focus 2
+shift + ctrl + cmd - 3 : yabai -m window --space 3    --focus; yabai -m space --focus 3
+shift + ctrl + cmd - 4 : yabai -m window --space 4    --focus; yabai -m space --focus 4
+shift + ctrl + cmd - 5 : yabai -m window --space 5    --focus; yabai -m space --focus 5
 
 # focus monitor
 # ctrl + alt - z  : yabai -m display --focus prev
@@ -83,4 +106,4 @@ shift + ctrl - up   : yabai -m window --resize bottom:0:-20
 shift + alt - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # toggle sticky(+float), picture-in-picture
-# alt - p : yabai -m window --toggle sticky --toggle pip
+alt - p : yabai -m window --toggle sticky --toggle pip
