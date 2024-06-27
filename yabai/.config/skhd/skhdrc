@@ -53,7 +53,7 @@ alt - r : yabai -m space --rotate 90
 
 # toggle window zoom
 alt - d : yabai -m window --toggle zoom-parent
-alt - f : yabai -m window --toggle zoom-fullscreen
+alt - f : yabai -m window --grid 1:1:0:0:1:1 || yabai -m window --toggle zoom-fullscreen
 
 # toggle window split type
 alt - e : yabai -m window --toggle split
