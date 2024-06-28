@@ -116,5 +116,5 @@ shift + alt - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
 alt - p : yabai -m window --toggle sticky --toggle pip
 
 # Toggle sketchybar
-shift + ctrl - space : sketchybar --bar hidden=toggle
+shift + ctrl - space : $HOME/.config/skhd/scripts/toggle-bar.sh
 
