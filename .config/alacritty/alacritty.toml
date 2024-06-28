@@ -1,6 +1,10 @@
-#import = ["~/.config/alacritty/themes/themes/afterglow.toml"]
-#import = ["~/.config/alacritty/themes/dracula.toml"]
-import = ["~/.config/alacritty/themes/tokyo-night-storm.toml"]
+import = [
+    # "~/.config/alacritty/themes/themes/afterglow.toml",
+    # "~/.config/alacritty/themes/dracula.toml",
+    # "~/.config/alacritty/themes/tokyo-night-storm.toml",
+    "~/.config/alacritty/themes/alacritty-themes/themes/tokyo-night.toml",
+    # "~/.config/alacritty/themes/alacritty-themes/themes/tokyo-night-storm.toml",
+]
 
 live_config_reload = true
 
@@ -10,7 +14,7 @@ args = ["-l", "-c", "tmux attach -t '🚀 copium ' || tmux new -s '🚀 copiu
 
 [window]
 dimensions = { columns = 187, lines = 42 }
-opacity = 0.95
+opacity = 1
 padding = { x = 1, y = 1 }
 dynamic_padding = true
 decorations = "Buttonless"
