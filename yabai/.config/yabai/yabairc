@@ -3,15 +3,10 @@
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
-yabai -m config window_opacity             on             \
-                window_opacity_duration    0.1            \
-                active_window_opacity      1.0            \
-                normal_window_opacity      0.83           \
-                external_bar               all:40:0       \
-                auto_balance               on             \
-                window_zoom_persist        on             \
-                window_animation_duration  0.1            \
-                window_animation_easing    easeInOutQuint 
+# default layout (can be bsp, stack or float)
+yabai -m config layout bsp
+yabai -m config external_bar all:40:0
+yabai -m config auto_balance on
 
 # Set all padding (default: 0)
 yabai -m config top_padding    9
@@ -22,23 +17,26 @@ yabai -m config window_gap     15
 
 # modify window shadows (default: on, options: on, off, float)
 yabai -m config window_shadow float
-
-# default layout (can be bsp, stack or float)
-yabai -m config layout bsp
-
+yabai -m config window_zoom_persist on
+yabai -m config window_animation_duration 0.1
+yabai -m config window_animation_easing easeInOutQuint
+yabai -m config window_opacity on
+yabai -m config window_opacity_duration 0.05
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.83
 # new window spawns to the right if vertical split, or bottom if horizontal split
 yabai -m config window_placement second_child
 
 # center mouse on window with focus
 yabai -m config mouse_follows_focus off
-
+# focus window under cursor
+yabai -m config focus_follows_mouse off
 # modifier for clicking and dragging with mouse
 yabai -m config mouse_modifier cmd
 # set modifier + left-click drag to move window
 yabai -m config mouse_action1 move
 # set modifier + right-click drag to resize window
 yabai -m config mouse_action2 resize
-
 # when window is dropped in center of another window, swap them (on edges it will split it)
 yabai -m config mouse_drop_action stack
 
