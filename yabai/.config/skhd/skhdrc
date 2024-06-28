@@ -51,6 +51,9 @@ alt - x : yabai -m space --layout float
 # rotate tree
 alt - r : yabai -m space --rotate 90
 
+# mirror tree
+alt - a : yabai -m space --rotate 180
+
 # toggle window zoom
 alt - d : yabai -m window --toggle zoom-parent
 alt - f : yabai -m window --grid 1:1:0:0:1:1 || yabai -m window --toggle zoom-fullscreen
