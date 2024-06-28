@@ -42,3 +42,10 @@ fi
 # export OH_MY_POSH
 export LESS="--mouse -R"
 
+if [ ! -e "$LANG" ]; then
+  export LANG="C.UTF-8"
+fi
+if [ ! -e "$LC_ALL" ]; then
+  export LC_ALL="C.UTF-8"
+fi
+
