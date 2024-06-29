@@ -14,3 +14,5 @@ clean:
 	docker image prune --filter label=name=dotfiles --force --all
 	docker builder prune --force
 
+sketchybar:
+	/bin/sh -c "./yabai/.config/sketchybar/helpers/install.sh"
