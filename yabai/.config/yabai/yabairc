@@ -16,7 +16,7 @@ yabai -m config right_padding  9
 yabai -m config window_gap     15
 
 # modify window shadows (default: on, options: on, off, float)
-yabai -m config window_shadow float
+yabai -m config window_shadow off
 yabai -m config window_zoom_persist on
 yabai -m config window_animation_duration 0.1
 yabai -m config window_animation_easing easeInOutQuint
@@ -54,6 +54,7 @@ yabai -m rule --add label="Little Snitch Software Update" app="^Little Snitch So
 yabai -m rule --add label="iStat Menus" app="^iStat Menus$" manage=off
 yabai -m rule --add label="Raycast" app="^Raycast" manage=off
 yabai -m rule --add label="Karabiner-Elements" app="^Karabiner-Elements$" manage=off
+yabai -m rule --add label="SF Symbols" app="^SF\ Symbols$" manage=off
 
 # configure spaces
 yabai -m space 1 --label "com"
