@@ -1,3 +1,4 @@
+#!/bin/zsh
 # Shell integrations
 if [ -d "~/.py_default" ]; then
   source ~/.py_default/bin/activate
@@ -42,10 +43,12 @@ fi
 # export OH_MY_POSH
 export LESS="--mouse -R"
 
-if [ ! -e "$LANG" ]; then
+if [[ "$OSTYPE" == "linux"* ]]; then
   export LANG="C.UTF-8"
+  export LC_ALL="C.UTF-8"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  export LANG="en_US.UTF-8"
+  export LC_ALL="en_US.UTF-8"
+else
+  # how tf am i supposed to know what to do know, dikkah. hu ? ¯\_( ͡° ͜ʖ ͡°)_/¯
 fi
-if [ ! -e "$LC_ALL" ]; then
-  export LC_ALL="C"
-fi
-
