@@ -41,4 +41,5 @@
 	```sh
 	cd ~/dotfiles
 	stow yabai --no-folding
+	make sketchybar
 	```
