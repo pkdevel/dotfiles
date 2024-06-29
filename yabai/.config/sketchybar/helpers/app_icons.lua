@@ -207,5 +207,6 @@ return {
   ["Thunderbird"] = ":thunderbird:",
   ["Firefox"] = ":firefox:",
   ["WezTerm"] = ":wezterm:",
+  ["Fork"] = ":git_hub:",
   ["default"] = ":default:",
 }
