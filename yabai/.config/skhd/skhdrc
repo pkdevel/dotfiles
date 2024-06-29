@@ -43,9 +43,6 @@ ctrl + cmd - return : yabai -m space --balance
 # center window
 ctrl + alt - c : yabai -m window --grid 4:4:1:1:2:2
 
-# Enable / Disable gaps in current workspace
-ctrl + alt + cmd - return : yabai -m space --toggle padding; yabai -m space --toggle gap
-
 # switch layouts
 alt - s : yabai -m space --layout stack
 alt - w : yabai -m space --layout bsp
