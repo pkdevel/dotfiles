@@ -69,5 +69,17 @@ yabai -m rule --add app="Safari" space=^3
 yabai -m rule --add app="Brave" space=^3
 yabai -m rule --add app="Google Chrome" space=^3
 
+# configure events
+yabai -m signal --add event=space_changed action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add event=window_created action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add event=window_destroyed action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add event=window_moved action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add event=application_visible action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add event=application_hidden action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add event=application_launched action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add event=application_terminated action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add event=display_changed action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add event=mission_control_exit action="source ~/.config/yabai/scripts/padding.sh"
+
 echo "yabai configuration loaded.."
 
