@@ -4,6 +4,9 @@ cmd + shift - return : open /Applications/Alacritty.app
 # restart yabai
 shift + ctrl + cmd - r : yabai --restart-service
 
+# restart yabai
+shift + ctrl + alt - r : sketchybar --reload
+
 # fast focus space
 cmd - left  : yabai -m space --focus prev
 cmd - right : yabai -m space --focus next
