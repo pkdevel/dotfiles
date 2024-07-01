@@ -19,7 +19,7 @@ local wifi_up = sbar.add("item", "widgets.wifi1", {
 		padding_right = 0,
 		font = {
 			style = settings.font.style_map["Bold"],
-			size = 9.0,
+			size = 12.0,
 		},
 		string = icons.wifi.upload,
 	},
@@ -27,12 +27,12 @@ local wifi_up = sbar.add("item", "widgets.wifi1", {
 		font = {
 			family = settings.font.numbers,
 			style = settings.font.style_map["Bold"],
-			size = 9.0,
+			size = 12.0,
 		},
 		color = colors.red,
 		string = "??? Bps",
 	},
-	y_offset = 4,
+	y_offset = 6,
 })
 
 local wifi_down = sbar.add("item", "widgets.wifi2", {
@@ -42,7 +42,7 @@ local wifi_down = sbar.add("item", "widgets.wifi2", {
 		padding_right = 0,
 		font = {
 			style = settings.font.style_map["Bold"],
-			size = 9.0,
+			size = 12.0,
 		},
 		string = icons.wifi.download,
 	},
@@ -50,12 +50,12 @@ local wifi_down = sbar.add("item", "widgets.wifi2", {
 		font = {
 			family = settings.font.numbers,
 			style = settings.font.style_map["Bold"],
-			size = 9.0,
+			size = 12.0,
 		},
-		color = colors.blue,
+		color = colors.green,
 		string = "??? Bps",
 	},
-	y_offset = -4,
+	y_offset = -6,
 })
 
 local wifi = sbar.add("item", "widgets.wifi.padding", {
@@ -159,7 +159,7 @@ sbar.add("item", { position = "right", width = settings.group_paddings })
 
 wifi_up:subscribe("network_update", function(env)
 	local up_color = (env.upload == "000 Bps") and colors.grey or colors.red
-	local down_color = (env.download == "000 Bps") and colors.grey or colors.blue
+	local down_color = (env.download == "000 Bps") and colors.grey or colors.green
 	wifi_up:set({
 		icon = { color = up_color },
 		label = {
