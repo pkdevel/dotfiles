@@ -1,4 +1,4 @@
-local colors = require("colors")
+local sbar = require("sketchybar")
 local icons = require("icons")
 
 sbar.add("item", {
@@ -9,11 +9,6 @@ sbar.add("item", {
 		padding_left = 8,
 	},
 	label = { drawing = false },
-	background = {
-		color = colors.bg1,
-		border_color = colors.bg2,
-		border_width = 1,
-	},
 	padding_left = 1,
 	padding_right = 10,
 })
