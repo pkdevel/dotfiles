@@ -17,7 +17,7 @@ dimensions = { columns = 187, lines = 42 }
 opacity = 1
 padding = { x = 0, y = 0 }
 dynamic_padding = true
-decorations = "None"
+decorations = "Buttonless"
 resize_increments = true
 blur = true
 dynamic_title = false
