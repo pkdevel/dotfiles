@@ -5,11 +5,11 @@ sudo yabai --load-sa
 
 # default layout (can be bsp, stack or float)
 yabai -m config layout bsp
-yabai -m config external_bar all:40:0
+yabai -m config external_bar all:35:0
 yabai -m config auto_balance on
 
 # Set all padding (default: 0)
-yabai -m config top_padding    9
+yabai -m config top_padding    14
 yabai -m config bottom_padding 9
 yabai -m config left_padding   9
 yabai -m config right_padding  9
