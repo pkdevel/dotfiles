@@ -38,7 +38,7 @@ shift + ctrl + cmd - up    : yabai -m window --swap north
 shift + ctrl + cmd - down  : yabai -m window --swap south
 
 # balance size of windows
-ctrl + cmd - return : yabai -m space --balance
+shift + ctrl - return : yabai -m space --balance
 
 # center window
 ctrl + alt - c : yabai -m window --grid 4:4:1:1:2:2
@@ -99,12 +99,12 @@ shift + ctrl + alt - 8 : yabai -m window --space 8    --focus
 shift + ctrl + alt - 9 : yabai -m window --space 9    --focus
 
 # increase window size
-shift + ctrl - right : yabai -m window --resize right:50:0  & yabai -m window --resize left:-50:0
-shift + ctrl - down  : yabai -m window --resize bottom:0:50 & yabai -m window --resize top:0:-50
+shift + ctrl - right : yabai -m window --resize right:50:0  & yabai -m window --resize left:50:0
+shift + ctrl - down  : yabai -m window --resize bottom:0:50 & yabai -m window --resize top:0:50
 
 # decrease window size
-shift + ctrl - left : yabai -m window --resize right:-50:0  & yabai -m window --resize left:50:0 
-shift + ctrl - up   : yabai -m window --resize bottom:0:-50 & yabai -m window --resize top:0:50 
+shift + ctrl - left : yabai -m window --resize right:-50:0  & yabai -m window --resize left:-50:0 
+shift + ctrl - up   : yabai -m window --resize bottom:0:-50 & yabai -m window --resize top:0:-50 
 
 # set insertion point in focused container
 shift + ctrl + alt - up : yabai -m window --insert north
