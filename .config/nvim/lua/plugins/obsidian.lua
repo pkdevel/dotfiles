@@ -33,15 +33,14 @@ return {
   opts = {
     workspaces = {
       {
-        name = "Obsidian Vault",
-        path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault",
+        name = "ObsidianVault",
+        path = "~/Documents/ObsidianVault",
       },
       {
         name = "dotfiles",
         path = "~/dotfiles",
       },
     },
-    -- dir = vim.env.HOME .. "/obsidian-vault", -- specify the vault location. no need to call 'vim.fn.expand' here
     use_advanced_uri = true,
     finder = "telescope.nvim",
 
