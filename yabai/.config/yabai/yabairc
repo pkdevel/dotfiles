@@ -82,5 +82,7 @@ yabai -m signal --add label="padding08" event=application_terminated action="sou
 yabai -m signal --add label="padding09" event=display_changed action="source ~/.config/yabai/scripts/padding.sh"
 yabai -m signal --add label="padding10" event=mission_control_exit action="source ~/.config/yabai/scripts/padding.sh"
 
+yabai -m signal --add label="autofloat" event=window_created action="yabai -m query --windows --window $YABAI_WINDOW_ID | jq -er '.\"can-resize\" == false and .\"is-floating\" == false' && yabai -m window $YABAI_WINDOW_ID --toggle float"
+
 echo "yabai configuration loaded.."
 
