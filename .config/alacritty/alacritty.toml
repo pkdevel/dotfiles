@@ -15,7 +15,7 @@ resize_increments = true
 dynamic_title = false
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font", style = "Medium" }
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 size = 15
 builtin_box_drawing = true
 
