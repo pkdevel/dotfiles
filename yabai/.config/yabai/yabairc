@@ -59,17 +59,17 @@ yabai -m rule --add title="Open" manage=off
 
 # configure spaces
 yabai -m space 1 --label "com"
-yabai -m rule --add app="Mail" title!="New Message" space=^1
-yabai -m rule --add app="Telegram" space=^1
+yabai -m rule --add app="Mail" title!="New Message" space=^com
+yabai -m rule --add app="Telegram" space=^com
 
 yabai -m space 2 --label "copium"
-yabai -m rule --add app="Fork" space=^2
-yabai -m rule --add app="Obsidian" space=^2
+yabai -m rule --add app="Fork" space=^copium
+yabai -m rule --add app="Obsidian" space=^copium
 
 yabai -m space 3 --label "web"
-yabai -m rule --add app="Safari" space=^3
-yabai -m rule --add app="Brave" space=^3
-yabai -m rule --add app="Google Chrome" space=^3
+yabai -m rule --add app="Safari" space=^web
+yabai -m rule --add app="Brave" space=^web
+yabai -m rule --add app="Google Chrome" space=^web
 
 # configure events
 yabai -m signal --add event=space_changed action="source ~/.config/yabai/scripts/padding.sh"
