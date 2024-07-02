@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+yabai -m signal --add label="reload-sa" event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
 # default layout (can be bsp, stack or float)
@@ -42,46 +42,45 @@ yabai -m config mouse_drop_action stack
 
 # disable specific apps
 yabai -m rule --add label="Activity Monitor" app="^Activity Monitor$" manage=off
-yabai -m rule --add label="System Settings" app="^System Settings$" manage=off
 yabai -m rule --add label="App Store" app="^App Store$" manage=off
-yabai -m rule --add label="Mail" app="^Mail$" title="New Message" manage=off
 yabai -m rule --add label="Calculator" app="^Calculator$" manage=off
 yabai -m rule --add label="Finder" app="^Finder$" manage=off
-yabai -m rule --add label="Obsidian" app="^Obsidian$" title="^Obsidian$" manage=off
-yabai -m rule --add label="VLC" app="^VLC$" manage=off
-yabai -m rule --add label="Little Snitch Software Update" app="^Little Snitch Software Update$" manage=off
 yabai -m rule --add label="iStat Menus" app="^iStat Menus$" manage=off
+yabai -m rule --add label="Little Snitch Software Update" app="^Little Snitch Software Update$" manage=off
+yabai -m rule --add label="NewMail" app="^Mail$" title="New Message" manage=off
+yabai -m rule --add label="ObsidianVault" app="^Obsidian$" title="^Obsidian$" manage=off
 yabai -m rule --add label="Raycast" app="^Raycast" manage=off
-yabai -m rule --add label="Karabiner-Elements" app="^Karabiner-Elements$" manage=off
 yabai -m rule --add label="SF Symbols" app="^SF\ Symbols$" manage=off
 yabai -m rule --add label="SteerMouse" app="^SteerMouse$" manage=off
+yabai -m rule --add label="System Settings" app="^System Settings$" manage=off
+yabai -m rule --add label="VLC" app="^VLC$" manage=off
 yabai -m rule --add title="Open" manage=off
 
 # configure spaces
 yabai -m space 1 --label "com"
-yabai -m rule --add app="Mail" title!="New Message" space=^com
-yabai -m rule --add app="Telegram" space=^com
+yabai -m rule --add label="Mail" app="Mail" title!="New Message" space=^com
+yabai -m rule --add label="Telegram" app="Telegram" space=^com
 
 yabai -m space 2 --label "copium"
-yabai -m rule --add app="Fork" space=^copium
-yabai -m rule --add app="Obsidian" space=^copium
+yabai -m rule --add label="Fork" app="Fork" space=^copium
+yabai -m rule --add label="Obsidian" app="Obsidian" space=^copium
 
 yabai -m space 3 --label "web"
-yabai -m rule --add app="Safari" space=^web
-yabai -m rule --add app="Brave" space=^web
-yabai -m rule --add app="Google Chrome" space=^web
+yabai -m rule --add label="Safari" app="Safari" space=^web
+yabai -m rule --add label="Brave" app="Brave" space=^web
+yabai -m rule --add label="Google Chrome" app="Google Chrome" space=^web
 
 # configure events
-yabai -m signal --add event=space_changed action="source ~/.config/yabai/scripts/padding.sh"
-yabai -m signal --add event=window_created action="source ~/.config/yabai/scripts/padding.sh"
-yabai -m signal --add event=window_destroyed action="source ~/.config/yabai/scripts/padding.sh"
-yabai -m signal --add event=window_moved action="source ~/.config/yabai/scripts/padding.sh"
-yabai -m signal --add event=application_visible action="source ~/.config/yabai/scripts/padding.sh"
-yabai -m signal --add event=application_hidden action="source ~/.config/yabai/scripts/padding.sh"
-yabai -m signal --add event=application_launched action="source ~/.config/yabai/scripts/padding.sh"
-yabai -m signal --add event=application_terminated action="source ~/.config/yabai/scripts/padding.sh"
-yabai -m signal --add event=display_changed action="source ~/.config/yabai/scripts/padding.sh"
-yabai -m signal --add event=mission_control_exit action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding01" event=space_changed action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding02" event=window_created action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding03" event=window_destroyed action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding04" event=window_moved action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding05" event=application_visible action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding06" event=application_hidden action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding07" event=application_launched action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding08" event=application_terminated action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding09" event=display_changed action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding10" event=mission_control_exit action="source ~/.config/yabai/scripts/padding.sh"
 
 echo "yabai configuration loaded.."
 
