@@ -1,5 +1,6 @@
 # open/focus terminal
-cmd + shift - return : open -a 'Alacritty'
+shift + cmd - return : open -a 'Alacritty'
+ctrl + cmd - return : open -a 'Kitty'
 
 # restart yabai
 shift + ctrl + cmd - r : yabai --restart-service
