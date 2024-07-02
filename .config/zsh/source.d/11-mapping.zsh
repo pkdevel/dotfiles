@@ -25,4 +25,4 @@ bindkey -M emacs '^[[1;5D' backward-word
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
-
+bindkey "^[[3~" delete-char
