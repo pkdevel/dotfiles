@@ -18,7 +18,6 @@ decorations = "Buttonless"
 resize_increments = true
 blur = true
 dynamic_title = false
-option_as_alt = "Both"
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Medium" }
