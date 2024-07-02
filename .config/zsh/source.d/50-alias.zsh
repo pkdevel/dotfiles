@@ -10,6 +10,8 @@ alias lld='ls -lda'
 alias gs='git status'
 alias gup='git pull --rebase --autostash'
 
+alias lg='lazygit'
+
 alias cat='bat --plain -pp'
 fo() {
   arguments=$(fzf --multi --preview 'bat --plain --color=always {}')
