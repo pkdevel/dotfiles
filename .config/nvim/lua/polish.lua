@@ -8,3 +8,5 @@ vim.filetype.add {
     swiftinterface = "swift",
   },
 }
+
+vim.opt.conceallevel = 1
