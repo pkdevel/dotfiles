@@ -3,20 +3,15 @@ import = [
     "~/.config/alacritty/keybinds.toml",
 ]
 
-live_config_reload = true
-
 [shell]
 program = "/bin/zsh"
 args = ["-l", "-c", "tmux attach -t '🚀 copium ' || tmux new -s '🚀 copium '"]
 
 [window]
 dimensions = { columns = 187, lines = 42 }
-opacity = 1
-padding = { x = 0, y = 0 }
 dynamic_padding = true
 decorations = "Buttonless"
 resize_increments = true
-blur = true
 dynamic_title = false
 
 [font]
@@ -26,7 +21,3 @@ builtin_box_drawing = true
 
 [selection]
 save_to_clipboard = true
-
-[mouse]
-hide_when_typing = false
-bindings = [{ mouse = "Middle", mode = "~Vi", action = "PasteSelection" }]
