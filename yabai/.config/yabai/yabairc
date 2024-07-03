@@ -5,7 +5,7 @@ sudo yabai --load-sa
 
 # default layout (can be bsp, stack or float)
 yabai -m config layout bsp
-yabai -m config external_bar all:35:0
+yabai -m config external_bar all:24:0
 yabai -m config auto_balance on
 
 # Set all padding (default: 0)

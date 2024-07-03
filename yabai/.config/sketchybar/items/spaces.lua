@@ -10,40 +10,34 @@ for i = 1, 10, 1 do
 	local space = sbar.add("space", "space." .. i, {
 		space = i,
 		icon = {
-			font = { family = settings.font.numbers },
+			font = {
+				family = settings.font.numbers,
+				size = 18.0,
+			},
 			string = i,
-			padding_left = 15,
-			padding_right = 8,
+			padding_left = 10,
 			color = colors.white,
 			highlight_color = colors.orange,
+			y_offset = 1,
 		},
 		label = {
-			padding_right = 20,
+			padding_right = 15,
 			color = colors.grey,
 			highlight_color = colors.white,
-			font = "sketchybar-app-font:Regular:20.0",
+			font = "sketchybar-app-font:Regular:18.0",
 			y_offset = -2,
 		},
 		background = {
-			height = 26,
+			height = 20,
 			corner_radius = 5,
-			padding_left = 2,
-			padding_right = 2,
 		},
-		padding_left = 1,
-		padding_right = 1,
+		padding_left = 2,
+		padding_right = 2,
 		popup = { background = { border_color = colors.black } },
 	})
 
 	spaces[i] = space
 	spaceNames[i] = space.name
-
-	-- Padding space
-	sbar.add("space", "space.padding." .. i, {
-		space = i,
-		script = "",
-		width = settings.group_paddings,
-	})
 
 	local space_popup = sbar.add("item", {
 		position = "popup." .. space.name,
@@ -86,7 +80,7 @@ end
 sbar.add("bracket", "space", spaceNames, {
 	background = {
 		color = colors.bg1,
-		height = 30,
+		height = 22,
 		corner_radius = 5,
 	},
 })
