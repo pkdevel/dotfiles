@@ -5,4 +5,3 @@ else
   zinit ice depth=1; zinit light romkatv/powerlevel10k
   [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 fi
-

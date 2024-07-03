@@ -57,4 +57,3 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 else
   # how tf am i supposed to know what to do know, dikkah. hu ? ¯\_( ͡° ͜ʖ ͡°)_/¯
 fi
-

@@ -45,6 +45,19 @@ setopt hist_find_no_dups
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# Enables ZSH special dirs tab-completion
+zstyle ':completion:*' special-dirs true
+
+if command -v docker &> /dev/null; then
+   zstyle ':completion:*:*:docker:*' option-stacking yes
+   zstyle ':completion:*:*:docker-*:*' option-stacking yes
+fi
+
+if command -v fzf &> /dev/null; then
+  zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons --color always $realpath'
+  zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --icons --color always $realpath'
+else
+  zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+  zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --icons --color always $realpath'
+fi

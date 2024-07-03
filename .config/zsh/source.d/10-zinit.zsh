@@ -30,13 +30,6 @@ zinit wait lucid for \
   atinit"zicompinit; zicdreplay"  \
       OMZP::colored-man-pages
 
-zi ice as"completion"
-zi snippet OMZP::docker/completions/_docker
-
-zi ice as"completion"
-zi snippet OMZP::docker-compose/_docker-compose
-
 # Load completions
 autoload -Uz compinit && compinit
 zinit cdreplay -q
-
