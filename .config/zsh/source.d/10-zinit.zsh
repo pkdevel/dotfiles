@@ -27,8 +27,8 @@ zinit snippet OMZP::command-not-found
 zinit snippet OMZP::brew
 
 zinit wait lucid for \
-  atinit"zicompinit; zicdreplay"  \
-      OMZP::colored-man-pages
+   atinit"zicompinit; zicdreplay" \
+   OMZP::colored-man-pages
 
 # Load completions
 autoload -Uz compinit && compinit

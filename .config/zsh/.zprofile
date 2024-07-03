@@ -16,7 +16,7 @@ fi
 
 if [ -d "/opt/homebrew/opt/ruby" ]; then
   export PATH=/opt/homebrew/opt/ruby/bin:$PATH
-  export PATH=`gem environment gemdir`/bin:$PATH
+  export PATH=$(gem environment gemdir)/bin:$PATH
 
   # For compilers to find ruby you may need to set:
   export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
@@ -26,20 +26,20 @@ if [ -d "/opt/homebrew/opt/ruby" ]; then
   export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 fi
 
-if command -v nvim &> /dev/null; then
+if command -v nvim &>/dev/null; then
   alias vim="nvim"
   export EDITOR=nvim
-elif command -v vim &> /dev/null; then
+elif command -v vim &>/dev/null; then
   export EDITOR=vim
 else
   export EDITOR=vi
 fi
 
-if command -v ollama &> /dev/null; then
+if command -v ollama &>/dev/null; then
   export OLLAMA_HOST="mintz:11434"
 fi
 
-if command -v go &> /dev/null; then
+if command -v go &>/dev/null; then
   export GOPATH=$(go env GOPATH)
   export PATH=$PATH:$GOPATH/bin
 fi
