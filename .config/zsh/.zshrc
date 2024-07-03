@@ -30,6 +30,7 @@ fi
 
 # History
 HISTSIZE=5000
+HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
