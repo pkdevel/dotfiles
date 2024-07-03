@@ -7,8 +7,8 @@ sbar.bar({
 	height = 24,
 	y_offset = 0,
 	color = colors.bar.bg,
-	padding_right = 9,
-	padding_left = 9,
+	padding_right = 18,
+	padding_left = 18,
 	margin = 0,
 	shadow = false,
 })
