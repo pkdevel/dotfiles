@@ -39,6 +39,11 @@ if command -v ollama &> /dev/null; then
   export OLLAMA_HOST="mintz:11434"
 fi
 
+if command -v go &> /dev/null; then
+  export GOPATH=$(go env GOPATH)
+  export PATH=$PATH:$GOPATH/bin
+fi
+
 # use oh-my-posh
 # export OH_MY_POSH
 export LESS="--mouse -R"
@@ -52,3 +57,4 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 else
   # how tf am i supposed to know what to do know, dikkah. hu ? ¯\_( ͡° ͜ʖ ͡°)_/¯
 fi
+
