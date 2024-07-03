@@ -31,5 +31,17 @@ return {
         },
       },
     },
+    ---@diagnostic disable: missing-fields
+    config = {
+      bashls = {
+        filetypes = { "sh", "zsh" },
+      },
+      lua_ls = {
+        Lua = {
+          workspace = { checkThirdParty = false },
+          telemetry = { enable = false },
+        },
+      },
+    },
   },
 }

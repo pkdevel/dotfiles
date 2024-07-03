@@ -8,6 +8,9 @@ return {
     local null_ls = require "null-ls"
     config.sources = {
       null_ls.builtins.formatting.swift_format,
+      null_ls.builtins.formatting.shfmt.with {
+        filetypes = { "zsh" },
+      },
     }
     return config
   end,
