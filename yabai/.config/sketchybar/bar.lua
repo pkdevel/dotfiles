@@ -10,5 +10,5 @@ sbar.bar({
 	padding_right = 9,
 	padding_left = 9,
 	margin = 0,
-	shadow = true,
+	shadow = false,
 })
