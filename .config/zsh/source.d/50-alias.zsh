@@ -47,4 +47,10 @@ reload() {
   reset
 }
 
+sst() {
+  if [[ -n $1 ]]; then
+    ssh -t $1 '/bin/zsh -l -c "tmux new -A -s $(hostname)"'
+  else
+    echo "Usage: $0 destination"
+  fi
 }

@@ -5,7 +5,7 @@ import = [
 
 [shell]
 program = "/bin/zsh"
-args = ["-l", "-c", "tmux attach -t '🚀 copium ' || tmux new -s '🚀 copium '"]
+args = ["-l", "-c", "tmux new -A -s '🚀 copium '"]
 
 [window]
 dimensions = { columns = 187, lines = 42 }
