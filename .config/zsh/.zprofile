@@ -26,6 +26,10 @@ if [ -d "/opt/homebrew/opt/ruby" ]; then
   export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 fi
 
+if [ -d "$HOME/.swiftpm/bin" ]; then
+  export PATH=$HOME/.swiftpm/bin:$PATH
+fi
+
 if command -v nvim &>/dev/null; then
   alias vim="nvim"
   export EDITOR=nvim
