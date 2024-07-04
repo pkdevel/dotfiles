@@ -59,3 +59,7 @@
    stow yabai --no-folding
    make sketchybar
    ```
+
+
+![Alt](https://repobeats.axiom.co/api/embed/2154bbababdf4573c2028fa49d8330232159ef4f.svg "Repobeats analytics image")
+
