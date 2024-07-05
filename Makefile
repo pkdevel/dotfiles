@@ -1,14 +1,17 @@
 _docker:
-	docker build -t dotfiles . --build-arg USER=$$USER
+	docker build -t pkdevel/dotfiles . --build-arg USER=$$USER
 
-_docker-userland:
-	docker build -t dotfiles . --build-arg USER=$$USER --target userland
+_docker-slim:
+	docker build -t pkdevel/dotfiles-slim . --build-arg USER=$$USER --target slim
 
 _docker-run:
-	docker run -it --rm --user $$USER dotfiles
+	docker run -it --rm pkdevel/dotfiles
 
-test: _docker _docker-run
-test-zsh: _docker-userland _docker-run
+_docker-run-slim:
+	docker run -it --rm pkdevel/dotfiles
+
+test-nvim: _docker _docker-run
+test: _docker-slim _docker-run-slim
 
 clean:
 	docker image prune --filter label=name=dotfiles --force --all
