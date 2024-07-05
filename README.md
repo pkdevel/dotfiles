@@ -61,5 +61,4 @@
    ```
 
 
-![Alt](https://repobeats.axiom.co/api/embed/2154bbababdf4573c2028fa49d8330232159ef4f.svg "Repobeats analytics image")
-
+![Alt](https://repobeats.axiom.co/api/embed/71ef88603eac36b1f029a1754c2337abcb73934d.svg "Repobeats analytics image")
