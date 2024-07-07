@@ -8,7 +8,7 @@ _docker-run:
 	docker run -it --rm pkdevel/dotfiles
 
 _docker-run-slim:
-	docker run -it --rm pkdevel/dotfiles
+	docker run -it --rm pkdevel/dotfiles-slim
 
 test-nvim: _docker _docker-run
 test: _docker-slim _docker-run-slim
