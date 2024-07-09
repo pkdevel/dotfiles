@@ -10,8 +10,8 @@ _docker-run:
 _docker-run-slim:
 	docker run -it --rm pkdevel/dotfiles-slim
 
-test-nvim: _docker _docker-run
-test: _docker-slim _docker-run-slim
+test: _docker _docker-run
+test-slim: _docker-slim _docker-run-slim
 
 clean:
 	docker image prune --filter label=name=dotfiles --force --all
