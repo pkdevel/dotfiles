@@ -1,9 +1,14 @@
 # Getting Started
 
-- to run everything inside a docker container
+- to build and run everything inside a docker container
   `make test`
-- to just run zsh inside a docker container
-  `make test-zsh`
+- to build and run just zsh inside a docker container
+  `make test-nvim`
+- to just run the prebuild image
+  `docker run -it --rm pkdevel/dotfiles`
+  ___or___
+  `docker run -it --rm pkdevel/dotfiles-slim`
+- images are tagged with `latest`, `branch-ref` and `sha-commit-id`
 
 # Usage
 
