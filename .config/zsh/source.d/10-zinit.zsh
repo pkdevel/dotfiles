@@ -16,15 +16,22 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
+if [ ! -d "$ZSH_CACHE_DIR"/completions ]; then
+   mkdir -p "$ZSH_CACHE_DIR"/completions
+fi
+export FPATH="$FPATH:$ZSH_CACHE_DIR"/completions
+
 # Add in snippets
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
-zinit snippet OMZP::archlinux
-zinit snippet OMZP::aws
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
+# macos specific
 zinit snippet OMZP::brew
+zinit snippet OMZP::sdk
+# linux specific
+zinit snippet OMZP::archlinux
 
 zinit wait lucid for \
    atinit"zicompinit; zicdreplay" \
