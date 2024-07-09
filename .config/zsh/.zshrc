@@ -1,6 +1,7 @@
 # load all init scripts
 export ZSH_DISABLE_COMPFIX
-for source in $ZDOTDIR/source.d/*.zsh; do source $source; done
+
+for source in "$ZDOTDIR"/source.d/*.zsh; do source "$source"; done
 
 # Shell integrations
 # TODO: install with zinit
@@ -23,13 +24,13 @@ else
 fi
 
 if command -v thefuck &>/dev/null; then
-	eval $(thefuck --alias)
+	eval "$(thefuck --alias)"
 else
 	echo "thefuck not found"
 fi
 
 # History
-HISTSIZE=5000
+HISTSIZE=15000
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
