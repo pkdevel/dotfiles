@@ -10,7 +10,17 @@ sbar.add("alias", "TextInputMenuAgent,Item-0", {
 	padding_left = -10,
 	padding_right = -10,
 })
+sbar.add("alias", "SystemUIServer,TimeMachine.TMMenuExtraHost", {
+	position = "right",
+	padding_left = -10,
+	padding_right = -10,
+})
 sbar.add("alias", "Stats", {
+	position = "right",
+	padding_left = -10,
+	padding_right = -10,
+})
+sbar.add("alias", "Little Snitch Agent,Item-0", {
 	position = "right",
 	padding_right = -10,
 })
