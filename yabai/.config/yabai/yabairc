@@ -54,6 +54,7 @@ yabai -m rule --add label="SF Symbols" app="^SF\ Symbols$" manage=off
 yabai -m rule --add label="SteerMouse" app="^SteerMouse$" manage=off
 yabai -m rule --add label="System Settings" app="^System Settings$" manage=off
 yabai -m rule --add label="VLC" app="^VLC$" manage=off
+yabai -m rule --add label="Weather" app="^Weather$" manage=off
 yabai -m rule --add title="Open" manage=off
 
 # configure spaces
@@ -85,4 +86,3 @@ yabai -m signal --add label="padding10" event=mission_control_exit action="sourc
 yabai -m signal --add label="autofloat" event=window_created action="yabai -m query --windows --window $YABAI_WINDOW_ID | jq -er '.\"can-resize\" == false and .\"is-floating\" == false' && yabai -m window $YABAI_WINDOW_ID --toggle float"
 
 echo "yabai configuration loaded.."
-
