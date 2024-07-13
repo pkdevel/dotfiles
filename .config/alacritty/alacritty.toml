@@ -9,10 +9,13 @@ args = ["-l", "-c", "tmux new -A -s '🚀 copium '"]
 
 [window]
 dimensions = { columns = 187, lines = 42 }
+opacity = 0.9
+blur = true
 dynamic_padding = true
 decorations = "Buttonless"
 resize_increments = true
 dynamic_title = false
+option_as_alt = "both"
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
