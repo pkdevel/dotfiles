@@ -14,5 +14,6 @@ CMD ["/bin/zsh", "-l"]
 
 FROM slim
 USER root
+RUN stow . --no-folding -d /dotfiles/nvim.lazy -t /home/${USER} && chown -R ${USER}:${USER} /home/${USER}
 RUN apk add --no-cache neovim tree-sitter-cli npm clang build-base go
 USER ${USER}
