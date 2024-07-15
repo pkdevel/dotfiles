@@ -80,7 +80,6 @@ return {
   },
   {
     "mfussenegger/nvim-dap",
-    -- name = "nvim-dap-swift",
     dependencies = {
       "wojciech-kulik/xcodebuild.nvim",
     },
