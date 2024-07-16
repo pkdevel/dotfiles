@@ -23,18 +23,18 @@
 # timezone = "local"
 
 ## enable or disable automatic sync
-# auto_sync = true
+auto_sync = true
 
 ## enable or disable automatic update checks
-# update_check = true
+update_check = true
 
 ## address of the sync server
-# sync_address = "https://api.atuin.sh"
+sync_address = "http://manji.fritz.box:8888"
 
 ## how often to sync history. note that this is only triggered when a command
 ## is ran, so sync intervals may well be longer
 ## set it to 0 to sync after every command
-# sync_frequency = "10m"
+sync_frequency = "1m"
 
 ## which search mode to use
 ## possible values: prefix, fulltext, fuzzy, skim
@@ -162,46 +162,19 @@ enter_accept = true
 
 [stats]
 ## Set commands where we should consider the subcommand for statistics. Eg, kubectl get vs just kubectl
-# common_subcommands = [
-#   "apt",
-#   "cargo",
-#   "composer",
-#   "dnf",
-#   "docker",
-#   "git",
-#   "go",
-#   "ip",
-#   "kubectl",
-#   "nix",
-#   "nmcli",
-#   "npm",
-#   "pecl",
-#   "pnpm",
-#   "podman",
-#   "port",
-#   "systemctl",
-#   "tmux",
-#   "yarn",
-# ]
+common_subcommands = ["docker", "git", "go", "kubectl", "systemctl"]
 
 ## Set commands that should be totally stripped and ignored from stats
 # common_prefix = ["sudo"]
 
 ## Set commands that will be completely ignored from stats
-# ignored_commands = [
-#   "cd",
-#   "ls",
-#   "vi"
-# ]
+ignored_commands = ["cd", "ls", "ll", "vim", "nvim"]
 
 [keys]
 # Defaults to true. If disabled, using the up/down key won't exit the TUI when scrolled past the first/last entry.
 # scroll_exits = false
 
 [sync]
-# Enable sync v2 by default
-# This ensures that sync v2 is enabled for new installs only
-# In a later release it will become the default across the board
 records = true
 
 [preview]
@@ -210,23 +183,3 @@ records = true
 ## auto: length of the selected command.
 ## static: length of the longest command stored in the history.
 # strategy = "auto"
-
-[daemon]
-## Enables using the daemon to sync. Requires the daemon to be running in the background. Start it with `atuin daemon`
-# enabled = false
-
-## How often the daemon should sync in seconds
-# sync_frequency = 300
-
-## The path to the unix socket used by the daemon (on unix systems)
-## linux/mac: ~/.local/share/atuin/atuin.sock
-## windows: Not Supported
-# socket_path = "~/.local/share/atuin/atuin.sock"
-
-## Use systemd socket activation rather than opening the given path (the path must still be correct for the client)
-## linux: false
-## mac/windows: Not Supported
-# systemd_socket = false
-
-## The port that should be used for TCP on non unix systems
-# tcp_port = 8889
