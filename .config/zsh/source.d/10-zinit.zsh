@@ -11,29 +11,25 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Add in zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
 
-if [ ! -d "$ZSH_CACHE_DIR"/completions ]; then
-   mkdir -p "$ZSH_CACHE_DIR"/completions
-fi
-export FPATH="$FPATH:$ZSH_CACHE_DIR"/completions
+zi blockf wait lucid for \
+  zsh-users/zsh-syntax-highlighting \
+  zsh-users/zsh-completions \
+  zsh-users/zsh-autosuggestions \
+  Aloxaf/fzf-tab
 
 # Add in snippets
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
-zinit snippet OMZP::kubectl
-zinit snippet OMZP::kubectx
-zinit snippet OMZP::command-not-found
-# macos specific
-zinit snippet OMZP::brew
-zinit snippet OMZP::sdk
-# linux specific
-zinit snippet OMZP::archlinux
+zi blockf wait lucid for \
+  OMZP::git \
+  OMZP::sudo \
+  OMZP::kubectl \
+  OMZP::kubectx \
+  OMZP::command-not-found \
+  OMZP::brew \
+  OMZP::sdk \
+  OMZP::archlinux
 
-zinit wait lucid for \
+zi wait lucid for \
    atinit"zicompinit; zicdreplay" \
    OMZP::colored-man-pages
 
