@@ -55,7 +55,6 @@ return {
     dependencies = {
       "wojciech-kulik/xcodebuild.nvim",
     },
-    lazy = true,
     config = function()
       local xcodebuild = require("xcodebuild.integrations.dap")
       local codelldbPath = os.getenv("HOME") .. "/.local/share/nvim/mason/packages/codelldb"
@@ -73,7 +72,9 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    optional = true,
+    dependencies = {
+      "wojciech-kulik/xcodebuild.nvim",
+    },
     ---@class PluginLspOpts
     opts = {
       servers = {
@@ -94,7 +95,9 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    optional = true,
+    dependencies = {
+      "wojciech-kulik/xcodebuild.nvim",
+    },
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "swift",
@@ -103,20 +106,14 @@ return {
   },
   {
     "williamboman/mason.nvim",
-    optional = true,
+    dependencies = {
+      "wojciech-kulik/xcodebuild.nvim",
+    },
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "swiftlint",
+        "codelldb",
       })
     end,
-  },
-  {
-    "jay-babu/mason-nvim-dap.nvim",
-    ft = "swift",
-    opts = {
-      ensure_installed = {
-        "codelldb",
-      },
-    },
   },
 }

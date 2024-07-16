@@ -1,7 +1,6 @@
 return {
   {
     "nvim-cmp",
-    optional = true,
     dependencies = {
       "supermaven-inc/supermaven-nvim",
     },
