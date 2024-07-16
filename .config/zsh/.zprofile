@@ -1,6 +1,6 @@
 #!/bin/zsh
 # Shell integrations
-if [ -d "~/.py_default" ]; then
+if [ -d "$HOME/.py_default" ]; then
   source ~/.py_default/bin/activate
 fi
 
@@ -8,8 +8,8 @@ if [ -d "/opt/homebrew" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export HOMEBREW_AUTO_UPDATE_SECS=86400
   export HOMEBREW_NO_ENV_HINTS=true
-elif [ -d "~/.linuxbrew" ]; then
-  eval "$(~/.linuxbrew/bin/brew shellenv)"
+elif [ -d "$HOME/.linuxbrew" ]; then
+  eval "$($HOME/.linuxbrew/bin/brew shellenv)"
 elif [ -d "/home/linuxbrew" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
