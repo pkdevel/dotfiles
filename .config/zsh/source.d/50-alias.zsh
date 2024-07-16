@@ -13,21 +13,21 @@ alias lg='lazygit'
 alias cat='bat -pp'
 
 fo() {
-  arguments=$(fzf --multi --preview 'bat -pp --color=always {}')
+  arguments=$(fzf-tmux --multi --preview 'bat -pp --color=always {}')
   if [ -z "$arguments" ]; then
     return 1
   fi
   open $arguments
 }
 fe() {
-  arguments=$(fzf --multi --preview 'bat -pp --color=always {}')
+  arguments=$(fzf-tmux --multi --preview 'bat -pp --color=always {}')
   if [ -z "$arguments" ]; then
     return 1
   fi
   vim $arguments
 }
 ff() {
-  arguments=$(fzf --tmux center,90%,60% --multi)
+  arguments=$(fzf-tmux -p 90%,60% --multi)
   if [ -z "$arguments" ]; then
     return 1
   fi

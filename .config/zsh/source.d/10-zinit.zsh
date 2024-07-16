@@ -11,6 +11,9 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Add in zsh plugins
+zi pack for ls_colors
+zinit pack"default+keys" for fzf
+
 zi ice blockf wait lucid as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atuin -> atuin" \
   atclone"./atuin init zsh --disable-up-arrow > init.zsh; ./atuin gen-completions --shell zsh > _atuin" \
   atpull"%atclone" src"init.zsh"

@@ -11,12 +11,6 @@ else
 	echo "eza not found"
 fi
 
-if command -v fzf &>/dev/null; then
-	eval "$(fzf --zsh)"
-else
-	echo "fzf not found"
-fi
-
 if command -v zoxide &>/dev/null; then
 	eval "$(zoxide init --cmd cd zsh)"
 else
