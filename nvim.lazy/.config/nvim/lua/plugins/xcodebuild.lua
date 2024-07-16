@@ -57,7 +57,7 @@ return {
     },
     config = function()
       local xcodebuild = require("xcodebuild.integrations.dap")
-      local codelldbPath = os.getenv("HOME") .. "/.local/share/nvim/mason/packages/codelldb"
+      local codelldbPath = os.getenv("HOME") .. "/.local/share/nvim/mason/packages/codelldb/codelldb"
 
       xcodebuild.setup(codelldbPath)
 
