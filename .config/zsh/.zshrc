@@ -30,10 +30,10 @@ else
 fi
 
 # History
-HISTSIZE=15000
-HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
-SAVEHIST=$HISTSIZE
-HISTDUP=erase
+export HISTSIZE=15000
+export HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+export SAVEHIST=$HISTSIZE
+export HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
