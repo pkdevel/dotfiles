@@ -1,5 +1,5 @@
 # load all init scripts
-export ZSH_DISABLE_COMPFIX
+export ZSH_DISABLE_COMPFIX=true
 
 for source in "$ZDOTDIR"/source.d/*.zsh; do source "$source"; done
 
