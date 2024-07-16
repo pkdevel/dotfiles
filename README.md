@@ -3,7 +3,7 @@
 - to build and run everything inside a docker container
   `make test`
 - to build and run just zsh inside a docker container
-  `make test-nvim`
+  `make test-slim`
 - to just run the prebuild image
   `docker run -it --rm pkdevel/dotfiles`
   ___or___
