@@ -13,9 +13,6 @@ return {
     optional = true,
     ---@class PluginLspOpts
     opts = {
-      inlay_hint = {
-        enabled = false,
-      },
       servers = {
         html = {
           filetypes = { "html", "templ" },

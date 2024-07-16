@@ -5,7 +5,7 @@ return {
       "supermaven-inc/supermaven-nvim",
     },
     opts = function(_, opts)
-      table.insert(opts.sources, 1, {
+      table.insert(opts.sources, {
         name = "supermaven",
         group_index = 1,
         priority = 100,
@@ -17,9 +17,12 @@ return {
     lazy = false,
     config = function()
       require("supermaven-nvim").setup({
+        keymaps = {
+          accept_suggestion = "<S-Tab>",
+        },
         color = {
-          suggestion_color = "#cfc9c2",
-          cterm = 244,
+          suggestion_color = "#efc777",
+          cterm = 117,
         },
       })
     end,
