@@ -13,6 +13,7 @@ return {
       home = vim.fn.stdpath("data") .. "/leetcode",
       cache = vim.fn.stdpath("cache") .. "/leetcode",
     },
-    image_support = true,
+    --- TODO: install image support
+    image_support = false,
   },
 }
