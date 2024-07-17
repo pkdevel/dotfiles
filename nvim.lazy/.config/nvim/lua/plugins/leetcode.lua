@@ -10,8 +10,8 @@ return {
   opts = {
     lang = "java",
     storage = {
-      home = vim.fn.stdpath("data") .. "/leetcode",
-      cache = vim.fn.stdpath("cache") .. "/leetcode",
+      home = vim.fn.expand("$HOME") .. "/dev/leetcode",
+      cache = vim.fn.expand("$HOME") .. "/dev/leetcode/.cache",
     },
     --- TODO: install image support
     image_support = false,
