@@ -36,6 +36,9 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+# match dotfiles
+setopt globdots
+
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # set list-colors to enable filename colorizing
@@ -44,8 +47,6 @@ zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
 zstyle ':completion:*' menu no
 # set descriptions format to enable group support
 zstyle ':completion:*:descriptions' format '[%d]'
-# Enables ZSH special dirs tab-completion
-zstyle ':completion:*' special-dirs true
 
 # switch group using `<` and `>`
 zstyle ':fzf-tab:*' switch-group '<' '>'
