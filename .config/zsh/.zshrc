@@ -52,9 +52,7 @@ zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':fzf-tab:*' switch-group '<' '>'
 # tmux popup support
 zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
-zstyle ':fzf-tab:complete:*' popup-pad 600 100
-
-zstyle ':fzf-tab:*' fzf-preview 'bat -pp --color=always $realpath'
+zstyle ':fzf-tab:*' popup-pad 420 69
 
 # preview directory's content with eza when completing cd
 if command -v eza &>/dev/null; then
@@ -69,3 +67,4 @@ if command -v docker &>/dev/null; then
 	zstyle ':completion:*:*:docker:*' option-stacking yes
 	zstyle ':completion:*:*:docker-*:*' option-stacking yes
 fi
+

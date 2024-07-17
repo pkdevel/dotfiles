@@ -10,21 +10,6 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Add in zsh plugins
-zi pack for ls_colors
-zinit pack"default+keys" for fzf
-
-zi ice blockf wait lucid as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atuin -> atuin" \
-  atclone"./atuin init zsh --disable-up-arrow > init.zsh; ./atuin gen-completions --shell zsh > _atuin" \
-  atpull"%atclone" src"init.zsh"
-zi light atuinsh/atuin
-
-zi blockf wait lucid for \
-  zsh-users/zsh-syntax-highlighting \
-  zsh-users/zsh-completions \
-  zsh-users/zsh-autosuggestions \
-  Aloxaf/fzf-tab
-
 # Add in snippets
 zi blockf wait lucid for \
   OMZP::git \
@@ -37,9 +22,26 @@ zi blockf wait lucid for \
   OMZP::archlinux
 
 zi wait lucid for \
-   atinit"zicompinit; zicdreplay" \
-   OMZP::colored-man-pages
+  atinit"zicompinit; zicdreplay" \
+  OMZP::colored-man-pages
 
 # Load completions
 autoload -Uz compinit && compinit
 zinit cdreplay -q
+
+# Add in zsh plugins
+zi blockf wait lucid for \
+  Aloxaf/fzf-tab \
+  Freed-Wu/fzf-tab-source \
+  zsh-users/zsh-syntax-highlighting \
+  zsh-users/zsh-completions \
+  zsh-users/zsh-autosuggestions
+
+zi pack for ls_colors
+zi pack"default+keys" for fzf
+
+zi ice blockf wait lucid as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atuin -> atuin" \
+  atclone"./atuin init zsh --disable-up-arrow > init.zsh; ./atuin gen-completions --shell zsh > _atuin" \
+  atpull"%atclone" src"init.zsh"
+zi light atuinsh/atuin
+
