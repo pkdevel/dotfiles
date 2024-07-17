@@ -50,8 +50,6 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
-            USER=dotty
 
       - name: Build and push slim flavor
         uses: docker/build-push-action@v6
@@ -60,6 +58,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta-slim.outputs.tags }}
           labels: ${{ steps.meta-slim.outputs.labels }}
-          build-args: |
-            USER=dotty
           target: slim

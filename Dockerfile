@@ -3,7 +3,7 @@ LABEL name="dotfiles"
 RUN apk add --no-cache --virtual base \
   ca-certificates curl git zsh fzf eza zoxide tmux stow bash
 
-ARG USER
+ARG USER=dotty
 RUN adduser -D -s /bin/zsh ${USER}
 COPY --chown=${USER}:${USER} . /dotfiles
 RUN stow . --no-folding -d /dotfiles -t /home/${USER} && \
