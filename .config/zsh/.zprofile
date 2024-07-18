@@ -48,9 +48,9 @@ if command -v go &>/dev/null; then
   export PATH=$PATH:$GOPATH/bin
 fi
 
-# use oh-my-posh
-# export OH_MY_POSH
-export LESS="--mouse -R"
+if command -v oh-my-posh &>/dev/null; then
+  export OH_MY_POSH
+fi
 
 if [[ "$OSTYPE" == "linux"* ]]; then
   export LANG="C.UTF-8"
@@ -61,3 +61,5 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 else
   # how tf am i supposed to know what to do now, dikkah. hu ? ¯\_( ͡° ͜ʖ ͡°)_/¯
 fi
+
+export LESS="--mouse -R"
