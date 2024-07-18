@@ -3,26 +3,6 @@ export ZSH_DISABLE_COMPFIX=true
 
 for source in "$ZDOTDIR"/source.d/*.zsh; do source "$source"; done
 
-# Shell integrations
-# TODO: install with zinit
-if command -v eza &>/dev/null; then
-	alias ls='eza --icons=auto --color=auto --git -stype'
-else
-	echo "eza not found"
-fi
-
-if command -v zoxide &>/dev/null; then
-	eval "$(zoxide init --cmd cd zsh)"
-else
-	echo "zoxide not found"
-fi
-
-if command -v thefuck &>/dev/null; then
-	eval "$(thefuck --alias)"
-else
-	echo "thefuck not found"
-fi
-
 # History
 export HISTSIZE=15000
 export HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history

@@ -15,7 +15,7 @@
 1. clone the repo into home folder
 
    ```sh
-   git clone git@github.com:pkdevel/dotfiles ~/dotfiles
+   git clone https://github.com/pkdevel/dotfiles ~/dotfiles
    ```
 
 1. init git submodules for added themes

@@ -11,22 +11,34 @@ alias gup='git pull --rebase --autostash'
 alias lg='lazygit'
 alias bat='bat -pp'
 
+if command -v eza &>/dev/null; then
+	alias ls='eza --icons=auto --color=auto --git -stype'
+else
+	echo "eza not found"
+fi
+
+if command -v thefuck &>/dev/null; then
+	eval "$(thefuck --alias)"
+else
+	echo "thefuck not found"
+fi
+
 fo() {
-  arguments=$(fzf-tmux --multi --preview 'bat -pp --color=always {}')
+  arguments=$(fzf --tmux=center,90% --multi --preview 'bat -pp --color=always {}')
   if [ -z "$arguments" ]; then
     return 1
   fi
   open $arguments
 }
 fe() {
-  arguments=$(fzf-tmux --multi --preview 'bat -pp --color=always {}')
+  arguments=$(fzf --tmux=center,90% --multi --preview 'bat -pp --color=always {}')
   if [ -z "$arguments" ]; then
     return 1
   fi
   vim $arguments
 }
 ff() {
-  arguments=$(fzf-tmux -p 90%,60% --multi)
+  arguments=$(fzf --tmux=center,90% --multi)
   if [ -z "$arguments" ]; then
     return 1
   fi
