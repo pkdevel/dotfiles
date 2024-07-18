@@ -32,8 +32,7 @@ zi blockf wait lucid from"gh-r" as"program" for \
     mv'jq* -> jq' \
   'jqlang/jq' \
     \
-    mv'bat* -> bat' \
-    pick'bat/bat' \
+    mv'bat* -> bat' pick'bat/bat' \
     atclone"
       cp -vf bat/bat.1 \"${man_dir}\";
       cp -vf bat/autocomplete/bat.zsh \"bat/autocomplete/_bat\"
@@ -63,7 +62,8 @@ zi blockf wait lucid from"gh-r" as"program" for \
       ./atuin init zsh --disable-up-arrow > init.zsh
       ./atuin gen-completions --shell zsh > _atuin
       " \
-    atpull'%atclone' src'init.zsh' \
+    atpull'%atclone' \
+    src'init.zsh' \
   'atuinsh/atuin'
 
 # Add in zsh plugins
