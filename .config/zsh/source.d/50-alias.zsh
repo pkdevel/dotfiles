@@ -1,5 +1,5 @@
 # Aliases
-alias ls='ls -h --color=auto'
+alias ls='ls -h --color=always'
 alias l='ls -l'
 alias ll='ls -la'
 alias ld='ls -ld'
@@ -9,8 +9,7 @@ alias gs='git status'
 alias gup='git pull --rebase --autostash'
 
 alias lg='lazygit'
-
-alias cat='bat -pp'
+alias bat='bat -pp'
 
 fo() {
   arguments=$(fzf-tmux --multi --preview 'bat -pp --color=always {}')
