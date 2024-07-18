@@ -65,5 +65,13 @@
    make sketchybar
    ```
 
+1. atuin: setup new shell
+
+   ```sh
+   atuin import zsh
+   atuin login
+   atuin sync
+   ```
+
 
 ![Alt](https://repobeats.axiom.co/api/embed/71ef88603eac36b1f029a1754c2337abcb73934d.svg "Repobeats analytics image")
