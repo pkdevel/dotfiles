@@ -4,6 +4,7 @@ Brewfile
 Makefile
 Dockerfile
 \.dockerignore
+\.stowrc
 
 doc
 macos
