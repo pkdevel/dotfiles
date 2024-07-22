@@ -13,15 +13,7 @@ bindings = [
   { key = "7", mods = "Command", chars = "\u00187" },             # <C-x 7> goto tmux window 6
   { key = "8", mods = "Command", chars = "\u00188" },             # <C-x 8> goto tmux window 7
   { key = "9", mods = "Command", chars = "\u00189" },             # <C-x 9> goto tmux window 8
+  { key = "S", mods = "Command", chars = "\u0013" },              # <C-s>   save in neovim
   { key = "Tab", mods = "Control", chars = "\u001b[9;5u" },       # C-Tab for neovim tabs
   { key = "Tab", mods = "Control|Shift", chars = "\u001b[9;6u" }, # C-Tab for neovim tabs
-  { key = "l", mods = "Option", chars = "@" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "e", mods = "Option", chars = "€" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "n", mods = "Option", chars = "~" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "7", mods = "Option", chars = "|" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "7", mods = "Option|Shift", chars = "\\" },             # restore keybinds after option_as_alt = "Both"
-  { key = "5", mods = "Option", chars = "[" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "6", mods = "Option", chars = "]" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "8", mods = "Option", chars = "{" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "9", mods = "Option", chars = "}" },                    # restore keybinds after option_as_alt = "Both"
 ]
