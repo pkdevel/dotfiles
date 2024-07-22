@@ -141,3 +141,5 @@ shift + ctrl + alt - right : yabai -m window --insert east
 shift + ctrl + alt - down  : yabai -m window --insert south
 shift + ctrl + alt - left  : yabai -m window --insert west
 
+# toggle scratchpad
+cmd - p : yabai -m window --toggle obsidian

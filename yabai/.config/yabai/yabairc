@@ -48,7 +48,6 @@ yabai -m rule --add label="Finder" app="^Finder$" manage=off
 yabai -m rule --add label="iStat Menus" app="^iStat Menus$" manage=off
 yabai -m rule --add label="Little Snitch Software Update" app="^Little Snitch Software Update$" manage=off
 yabai -m rule --add label="NewMail" app="^Mail$" title="New Message" manage=off
-yabai -m rule --add label="ObsidianVault" app="^Obsidian$" title="^Obsidian$" manage=off
 yabai -m rule --add label="Raycast" app="^Raycast" manage=off
 yabai -m rule --add label="SF Symbols" app="^SF\ Symbols$" manage=off
 yabai -m rule --add label="SteerMouse" app="^SteerMouse$" manage=off
@@ -64,7 +63,7 @@ yabai -m rule --add label="Telegram" app="Telegram" space=^com
 
 yabai -m space 2 --label "copium"
 yabai -m rule --add label="Fork" app="Fork" space=^copium
-yabai -m rule --add label="Obsidian" app="Obsidian" space=^copium
+yabai -m rule --add label="Obsidian" app="Obsidian" scratchpad=obsidian
 
 yabai -m space 3 --label "web"
 yabai -m rule --add label="Safari" app="Safari" space=^web
