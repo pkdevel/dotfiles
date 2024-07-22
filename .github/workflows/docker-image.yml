@@ -21,7 +21,7 @@ jobs:
 
       - name: Generate Docker metadata
         id: meta-slim
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v5
         with:
           images: |
             docker.io/${{ github.repository }}-slim
