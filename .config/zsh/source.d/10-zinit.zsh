@@ -64,7 +64,13 @@ zi blockf wait lucid from"gh-r" as"program" for \
       " \
     atpull'%atclone' \
     src'init.zsh' \
-  'atuinsh/atuin'
+  'atuinsh/atuin' \
+    \
+    light-mode \
+    mv"direnv* -> direnv" \
+    atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
+    pick"direnv" src="zhook.zsh" \
+  'direnv/direnv'
 
 # Add in zsh plugins
 zi blockf wait lucid for \
