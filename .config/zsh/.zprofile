@@ -48,9 +48,9 @@ if command -v go &>/dev/null; then
   export PATH=$PATH:$GOPATH/bin
 fi
 
-if command -v oh-my-posh &>/dev/null; then
-  export OH_MY_POSH
-fi
+# if command -v oh-my-posh &>/dev/null; then
+#   export OH_MY_POSH
+# fi
 
 if [[ "$OSTYPE" == "linux"* ]]; then
   export LANG="C.UTF-8"
