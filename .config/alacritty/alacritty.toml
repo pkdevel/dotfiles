@@ -1,9 +1,10 @@
+[general]
 import = [
   "~/.config/alacritty/themes/alacritty-themes/themes/tokyo-night.toml",
   "~/.config/alacritty/keybinds.iso.toml",
 ]
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 args = ["-l", "-c", "tmux new -A -s '🚀 copium '"]
 
@@ -24,3 +25,5 @@ builtin_box_drawing = true
 
 [selection]
 save_to_clipboard = true
+
+[terminal]
