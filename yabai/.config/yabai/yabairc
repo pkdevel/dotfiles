@@ -13,14 +13,14 @@ yabai -m config auto_balance off
 # yabai -m config bottom_padding 2
 # yabai -m config left_padding 2
 # yabai -m config right_padding 2
-yabai -m config window_gap 1
+# yabai -m config window_gap 1
 
 # modify window shadows (default: on, options: on, off, float)
 yabai -m config window_shadow off
 yabai -m config window_zoom_persist on
 yabai -m config window_animation_duration 0.09
 yabai -m config window_animation_easing ease_out_expo
-yabai -m config window_opacity on
+yabai -m config window_opacity off
 yabai -m config window_opacity_duration 0.05
 yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 0.87
@@ -58,9 +58,12 @@ yabai -m rule --add label="VLC" app="^VLC$" manage=off
 yabai -m rule --add label="Weather" app="^Weather$" manage=off
 yabai -m rule --add title="Open" manage=off
 
+yabai -m rule --add label="Modrinth" app="^Modrinth App$" manage=off
+yabai -m rule --add app="^java$" manage=off
+
 # configure spaces
 yabai -m space 1 --label "com"
-yabai -m rule --add label="Mail" app="Mail" title!="New Message" space=^com
+yabai -m rule --add label="Mail" app="Mail" space=^com
 yabai -m rule --add label="Telegram" app="Telegram" space=^com
 
 yabai -m space 2 --label "copium"
@@ -73,16 +76,16 @@ yabai -m rule --add label="Brave" app="Brave" space=^web
 yabai -m rule --add label="Google Chrome" app="Google Chrome" space=^web
 
 # configure events
-# yabai -m signal --add label="padding01" event=space_changed action="source ~/.config/yabai/scripts/padding.sh"
-# yabai -m signal --add label="padding02" event=window_created action="source ~/.config/yabai/scripts/padding.sh"
-# yabai -m signal --add label="padding03" event=window_destroyed action="source ~/.config/yabai/scripts/padding.sh"
-# yabai -m signal --add label="padding04" event=window_moved action="source ~/.config/yabai/scripts/padding.sh"
-# yabai -m signal --add label="padding05" event=application_visible action="source ~/.config/yabai/scripts/padding.sh"
-# yabai -m signal --add label="padding06" event=application_hidden action="source ~/.config/yabai/scripts/padding.sh"
-# yabai -m signal --add label="padding07" event=application_launched action="source ~/.config/yabai/scripts/padding.sh"
-# yabai -m signal --add label="padding08" event=application_terminated action="source ~/.config/yabai/scripts/padding.sh"
-# yabai -m signal --add label="padding09" event=display_changed action="source ~/.config/yabai/scripts/padding.sh"
-# yabai -m signal --add label="padding10" event=mission_control_exit action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding01" event=space_changed action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding02" event=window_created action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding03" event=window_destroyed action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding04" event=window_moved action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding05" event=application_visible action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding06" event=application_hidden action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding07" event=application_launched action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding08" event=application_terminated action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding09" event=display_changed action="source ~/.config/yabai/scripts/padding.sh"
+yabai -m signal --add label="padding10" event=mission_control_exit action="source ~/.config/yabai/scripts/padding.sh"
 
 yabai -m signal --add label="autofloat" event=window_created action="yabai -m query --windows --window $YABAI_WINDOW_ID | jq -er '.\"can-resize\" == false and .\"is-floating\" == false' && yabai -m window $YABAI_WINDOW_ID --toggle float"
 
