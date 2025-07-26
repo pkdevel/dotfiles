@@ -1,28 +1,26 @@
 [keyboard]
 bindings = [
-  { key = "N", mods = "Command", chars = "\u0018c" },             # <C-x c> new tmux window
-  { key = "W", mods = "Command", chars = "\u0018x" },             # <C-x x> kill tmux pane
-  { key = "T", mods = "Command", chars = "\u0018e" },             # <C-x e> tmux split horizontal
-  { key = "T", mods = "Command|Shift", chars = "\u0018v" },       # <C-x v> tmux split vertical
-  { key = "1", mods = "Command", chars = "\u00181" },             # <C-x 1> goto tmux window 0
-  { key = "2", mods = "Command", chars = "\u00182" },             # <C-x 2> goto tmux window 1
-  { key = "3", mods = "Command", chars = "\u00183" },             # <C-x 3> goto tmux window 2
-  { key = "4", mods = "Command", chars = "\u00184" },             # <C-x 4> goto tmux window 3
-  { key = "5", mods = "Command", chars = "\u00185" },             # <C-x 5> goto tmux window 4
-  { key = "6", mods = "Command", chars = "\u00186" },             # <C-x 6> goto tmux window 5
-  { key = "7", mods = "Command", chars = "\u00187" },             # <C-x 7> goto tmux window 6
-  { key = "8", mods = "Command", chars = "\u00188" },             # <C-x 8> goto tmux window 7
-  { key = "9", mods = "Command", chars = "\u00189" },             # <C-x 9> goto tmux window 8
-  { key = "S", mods = "Command", chars = "\u0013" },              # <C-s>   save in neovim
-  { key = "Tab", mods = "Control", chars = "\u001b[9;5u" },       # C-Tab for neovim tabs
-  { key = "Tab", mods = "Control|Shift", chars = "\u001b[9;6u" }, # C-Tab for neovim tabs
-  { key = "l", mods = "Option", chars = "@" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "e", mods = "Option", chars = "€" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "n", mods = "Option", chars = "~" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "7", mods = "Option", chars = "|" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "7", mods = "Option|Shift", chars = "\\" },             # restore keybinds after option_as_alt = "Both"
-  { key = "5", mods = "Option", chars = "[" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "6", mods = "Option", chars = "]" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "8", mods = "Option", chars = "{" },                    # restore keybinds after option_as_alt = "Both"
-  { key = "9", mods = "Option", chars = "}" },                    # restore keybinds after option_as_alt = "Both"
+  { key = "N", mods = "Command", chars = "\u0018c" },       # <C-x c> new tmux window
+  { key = "W", mods = "Command", chars = "\u0018x" },       # <C-x x> kill tmux pane
+  { key = "T", mods = "Command", chars = "\u0018e" },       # <C-x e> tmux split horizontal
+  { key = "T", mods = "Command|Shift", chars = "\u0018v" }, # <C-x v> tmux split vertical
+  { key = "1", mods = "Command", chars = "\u00181" },       # <C-x 1> goto tmux window 0
+  { key = "2", mods = "Command", chars = "\u00182" },       # <C-x 2> goto tmux window 1
+  { key = "3", mods = "Command", chars = "\u00183" },       # <C-x 3> goto tmux window 2
+  { key = "4", mods = "Command", chars = "\u00184" },       # <C-x 4> goto tmux window 3
+  { key = "5", mods = "Command", chars = "\u00185" },       # <C-x 5> goto tmux window 4
+  { key = "6", mods = "Command", chars = "\u00186" },       # <C-x 6> goto tmux window 5
+  { key = "7", mods = "Command", chars = "\u00187" },       # <C-x 7> goto tmux window 6
+  { key = "8", mods = "Command", chars = "\u00188" },       # <C-x 8> goto tmux window 7
+  { key = "9", mods = "Command", chars = "\u00189" },       # <C-x 9> goto tmux window 8
+  { key = "S", mods = "Command", chars = "\u0013" },        # <C-s>   save in neovim
+  { key = "l", mods = "Option", chars = "@" },              # restore keybinds after option_as_alt = "Both"
+  { key = "e", mods = "Option", chars = "€" },              # restore keybinds after option_as_alt = "Both"
+  { key = "n", mods = "Option", chars = "~" },              # restore keybinds after option_as_alt = "Both"
+  { key = "7", mods = "Option", chars = "|" },              # restore keybinds after option_as_alt = "Both"
+  { key = "7", mods = "Option|Shift", chars = "\\" },       # restore keybinds after option_as_alt = "Both"
+  { key = "5", mods = "Option", chars = "[" },              # restore keybinds after option_as_alt = "Both"
+  { key = "6", mods = "Option", chars = "]" },              # restore keybinds after option_as_alt = "Both"
+  { key = "8", mods = "Option", chars = "{" },              # restore keybinds after option_as_alt = "Both"
+  { key = "9", mods = "Option", chars = "}" },              # restore keybinds after option_as_alt = "Both"
 ]
