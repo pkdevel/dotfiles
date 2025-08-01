@@ -1,10 +1,4 @@
 # Aliases
-alias ls='ls -h --color=always'
-alias l='ls -l'
-alias ll='ls -la'
-alias ld='ls -ld'
-alias lld='ls -lda'
-
 alias gs='git status'
 alias gup='git pull --rebase --autostash'
 
@@ -13,8 +7,17 @@ alias bat='bat -pp'
 
 if command -v eza &>/dev/null; then
 	alias ls='eza --icons=auto --color=auto --git -stype'
+  alias l='ls -la'
+  alias ll='ls -laa'
+  alias ld='ls -lD'
+  alias lld='ls -lDaa'
 else
 	echo "eza not found"
+  alias ls='ls -h --color=always'
+  alias l='ls -l'
+  alias ll='ls -la'
+  alias ld='ls -ld'
+  alias lld='ls -lda'
 fi
 
 if command -v thefuck &>/dev/null; then
