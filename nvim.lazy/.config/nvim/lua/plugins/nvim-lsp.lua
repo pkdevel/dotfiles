@@ -1,13 +1,4 @@
 return {
-  -- override nvim-cmp and add cmp-emoji
-  {
-    "hrsh7th/nvim-cmp",
-    optional = true,
-    dependencies = { "hrsh7th/cmp-emoji" },
-    opts = function(_, opts)
-      table.insert(opts.sources, { name = "emoji" })
-    end,
-  },
   {
     "neovim/nvim-lspconfig",
     optional = true,
