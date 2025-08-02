@@ -1,7 +1,5 @@
 # Aliases
 alias gs='git status'
-alias gup='git pull --rebase --autostash'
-
 alias lg='lazygit'
 alias bat='bat -pp'
 

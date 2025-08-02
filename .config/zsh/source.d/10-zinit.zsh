@@ -11,8 +11,10 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Add in snippets
+zi snippet OMZP::git
+unalias gup
+
 zi blockf wait lucid for \
-    OMZP::git \
     OMZP::sudo \
     OMZP::kubectl \
     OMZP::kubectx \

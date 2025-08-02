@@ -60,7 +60,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   export LANG="en_US.UTF-8"
   export LC_ALL="en_US.UTF-8"
 else
-  # how tf am i supposed to know what to do now, dikkah. hu ? ¯\_( ͡° ͜ʖ ͡°)_/¯
+  # ¯\_( ͡° ͜ʖ ͡°)_/¯
 fi
 
 export LESS="--mouse -R"
