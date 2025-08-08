@@ -1,15 +1,25 @@
 return {
-  "supermaven-inc/supermaven-nvim",
-  lazy = false,
-  config = function()
-    require("supermaven-nvim").setup({
-      keymaps = {
-        accept_suggestion = "<S-Tab>",
+  {
+    "supermaven-inc/supermaven-nvim",
+    optional = true,
+    opts = {
+      disable_inline_completion = false,
+    },
+  },
+
+  {
+    "zbirenbaum/copilot.lua",
+    optional = true,
+    opts = {
+      suggestion = {
+        enabled = true,
+        -- hide_during_completion = vim.g.ai_cmp,
+        keymap = {
+          accept = false, -- handled by nvim-cmp / blink.cmp
+          next = "<M-]>",
+          prev = "<M-[>",
+        },
       },
-      color = {
-        suggestion_color = "#efc777",
-        cterm = 117,
-      },
-    })
-  end,
+    },
+  },
 }

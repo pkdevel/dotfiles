@@ -6,3 +6,6 @@ vim.filetype.add({
     swiftinterface = "swift",
   },
 })
+
+-- enable/disable copilot cmp integration
+-- vim.g.ai_cmp = false
