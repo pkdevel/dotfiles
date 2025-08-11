@@ -33,24 +33,10 @@ for i = 1, 10, 1 do
 		},
 		padding_left = 2,
 		padding_right = 2,
-		popup = { background = { border_color = colors.black } },
 	})
 
 	spaces[i] = space
 	spaceNames[i] = space.name
-
-	local space_popup = sbar.add("item", {
-		position = "popup." .. space.name,
-		padding_left = 5,
-		padding_right = 0,
-		background = {
-			drawing = true,
-			image = {
-				corner_radius = 9,
-				scale = 0.15,
-			},
-		},
-	})
 
 	space:subscribe("space_change", function(env)
 		local selected = env.SELECTED == "true"
@@ -61,19 +47,10 @@ for i = 1, 10, 1 do
 		})
 	end)
 
-	space:subscribe("mouse.entered", function(env)
-		space_popup:set({ background = { image = "space." .. env.SID } })
-		space:set({ popup = { drawing = "toggle" } })
-	end)
-
 	space:subscribe("mouse.clicked", function(env)
 		if env.BUTTON == "left" then
 			sbar.exec("yabai -m space --focus " .. env.SID)
 		end
-	end)
-
-	space:subscribe("mouse.exited", function(_)
-		space:set({ popup = { drawing = false } })
 	end)
 end
 
