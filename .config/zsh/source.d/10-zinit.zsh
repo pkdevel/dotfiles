@@ -34,20 +34,6 @@ zi blockf wait lucid from"gh-r" as"program" for \
     mv'jq* -> jq' \
   'jqlang/jq' \
     \
-    mv'bat* -> bat' pick'bat/bat' \
-    atclone"
-      cp -vf bat/bat.1 \"${man_dir}\";
-      cp -vf bat/autocomplete/bat.zsh \"bat/autocomplete/_bat\"
-      " \
-    atpull'%atclone' \
-    atload"$bat_manpager" \
-  '@sharkdp/bat' \
-    \
-    mv'fd* -> fd' pick'fd/fd' \
-    atclone"cp -vf fd/fd.1 \"${man_dir}\"" \
-    atpull'%atclone' \
-  '@sharkdp/fd' \
-    \
     mv'ripgrep* -> rg' pick'rg/rg' \
     atclone"cp -vf rg/doc/rg.1 \"${man_dir}\"" \
     atpull'%atclone' \
@@ -57,8 +43,6 @@ zi blockf wait lucid from"gh-r" as"program" for \
     atload'eval "$(zoxide init --cmd cd zsh)"' \
   'ajeetdsouza/zoxide' \
     \
-  'junegunn/fzf' \
-    \
     bpick'atuin-*.tar.gz' mv'atuin*/atuin -> atuin' \
     atclone"
       ./atuin init zsh --disable-up-arrow > init.zsh
@@ -67,12 +51,18 @@ zi blockf wait lucid from"gh-r" as"program" for \
     atpull'%atclone' \
     src'init.zsh' \
   'atuinsh/atuin' \
-    \
-    light-mode \
-    mv"direnv* -> direnv" \
-    atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
-    pick"direnv" src="zhook.zsh" \
-  'direnv/direnv'
+
+zi ice as"command" from"gh-r" mv"fd* -> fd" pick"fd/fd"
+zi light sharkdp/fd
+
+zi ice as"command" from"gh-r" mv"bat* -> bat" pick"bat/bat"
+zi light sharkdp/bat
+
+zi ice as"program" from"gh-r"
+zi light junegunn/fzf-bin
+
+zi ice as"program" make'!' atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' src"zhook.zsh"
+zi light direnv/direnv
 
 # Add in zsh plugins
 zi blockf wait lucid for \
