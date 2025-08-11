@@ -34,10 +34,10 @@ zstyle ':fzf-tab:*' switch-group '<' '>'
 zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 zstyle ':fzf-tab:*' popup-pad 420 69
 
-# preview directory's content with eza when completing cd
-if command -v eza &>/dev/null; then
-	zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons --color always $realpath'
-	zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --icons --color always $realpath'
+# preview directory's content with exa when completing cd
+if command -v exa &>/dev/null; then
+	zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --icons --color auto $realpath'
+	zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'exa -1 --icons --color auto $realpath'
 else
 	zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 	zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'

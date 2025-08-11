@@ -3,14 +3,14 @@ alias gs='git status'
 alias lg='lazygit'
 alias bat='bat -pp'
 
-if command -v eza &>/dev/null; then
-	alias ls='eza --icons=auto --color=auto --git -stype'
+if command -v exa &>/dev/null; then
+	alias ls='exa --icons --color auto --git -stype'
   alias l='ls -la'
   alias ll='ls -laa'
   alias ld='ls -lD'
   alias lld='ls -lDaa'
 else
-	echo "eza not found"
+	echo "exa not found"
   alias ls='ls -h --color=always'
   alias l='ls -l'
   alias ll='ls -la'

@@ -61,6 +61,9 @@ zi light sharkdp/bat
 zi ice as"program" from"gh-r"
 zi light junegunn/fzf-bin
 
+zi ice as"program" from"gh-r" mv"bin/exa* -> exa"
+zi light ogham/exa
+
 zi ice as"program" make'!' atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' src"zhook.zsh"
 zi light direnv/direnv
 
