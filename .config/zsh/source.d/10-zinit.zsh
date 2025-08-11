@@ -59,7 +59,7 @@ zi ice as"command" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zi light sharkdp/bat
 
 zi ice as"program" from"gh-r"
-zi light junegunn/fzf-bin
+zi light junegunn/fzf
 
 zi ice as"program" from"gh-r" mv"bin/exa* -> exa"
 zi light ogham/exa
