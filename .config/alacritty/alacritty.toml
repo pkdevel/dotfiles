@@ -2,6 +2,7 @@
 import = [
   "~/.config/alacritty/themes/alacritty-themes/themes/tokyo-night.toml",
   "~/.config/alacritty/keybinds.toml",
+  # "~/.config/alacritty/keybinds.iso.toml",
 ]
 
 [terminal.shell]
