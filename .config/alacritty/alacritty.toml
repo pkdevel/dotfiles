@@ -26,5 +26,3 @@ builtin_box_drawing = true
 
 [selection]
 save_to_clipboard = true
-
-[terminal]
