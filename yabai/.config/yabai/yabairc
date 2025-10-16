@@ -57,6 +57,8 @@ yabai -m rule --add label="System Settings" app="^System Settings$" manage=off
 yabai -m rule --add label="VLC" app="^VLC$" manage=off
 yabai -m rule --add label="Weather" app="^Weather$" manage=off
 yabai -m rule --add title="Open" manage=off
+yabai -m rule --add label="Toggl" app="^Toggl Track$" manage=off
+yabai -m rule --add label="Stream Deck" app="^Stream Deck$" manage=off
 
 yabai -m rule --add label="Modrinth" app="^Modrinth App$" manage=off
 yabai -m rule --add app="^java$" manage=off
