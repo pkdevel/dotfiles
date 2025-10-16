@@ -1,3 +1,7 @@
+if true then
+  return {}
+end
+
 return {
   {
     "wojciech-kulik/xcodebuild.nvim",
@@ -105,7 +109,7 @@ return {
     end,
   },
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     dependencies = {
       "wojciech-kulik/xcodebuild.nvim",
     },
