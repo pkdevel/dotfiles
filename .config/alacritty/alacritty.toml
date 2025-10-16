@@ -17,7 +17,7 @@ dynamic_padding = true
 decorations = "Buttonless"
 resize_increments = true
 dynamic_title = false
-option_as_alt = "both"
+option_as_alt = "OnlyLeft"
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
