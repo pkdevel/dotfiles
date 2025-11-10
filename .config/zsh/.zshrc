@@ -46,5 +46,6 @@ fi
 if command -v docker &>/dev/null; then
 	zstyle ':completion:*:*:docker:*' option-stacking yes
 	zstyle ':completion:*:*:docker-*:*' option-stacking yes
+  source <(docker completion zsh)
 fi
 
