@@ -9,8 +9,8 @@ CURRENT=$(yabai -m config --space $(yabai -m query --spaces --space | jq '(."ind
 # if the total is greater than 1, set padding, else disable padding.
 if [[ $TOTAL -gt 1 ]]; then
   if [[ $CURRENT -eq 0 ]]; then
-    yabai -m space --gap abs:20
-    yabai -m space --padding abs:20:16:18:18
+    yabai -m space --gap abs:10
+    yabai -m space --padding abs:8:8:8:8
   fi
 else
   if [[ $CURRENT -ne 0 ]]; then
