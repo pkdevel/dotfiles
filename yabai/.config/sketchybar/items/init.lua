@@ -22,6 +22,12 @@ sbar.add("alias", "Stats", {
 })
 sbar.add("alias", "Little Snitch Agent,Item-0", {
 	position = "right",
+	padding_left = -10,
+	padding_right = -10,
+})
+sbar.add("alias", "Toggl Track", {
+	position = "right",
+	padding_left = -10,
 	padding_right = -10,
 })
 
