@@ -49,3 +49,7 @@ if command -v docker &>/dev/null; then
   source <(docker completion zsh)
 fi
 
+if command -v golangci-lint &>/dev/null; then
+  source <(golangci-lint completion zsh)
+fi
+
