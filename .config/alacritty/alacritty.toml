@@ -21,8 +21,7 @@ option_as_alt = "OnlyLeft"
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-size = 14
-builtin_box_drawing = true
+size = 11.5
 
 [selection]
 save_to_clipboard = true
