@@ -1,13 +1,5 @@
 return {
   {
-    "supermaven-inc/supermaven-nvim",
-    optional = true,
-    opts = {
-      disable_inline_completion = false,
-    },
-  },
-
-  {
     "zbirenbaum/copilot.lua",
     optional = true,
     opts = {
