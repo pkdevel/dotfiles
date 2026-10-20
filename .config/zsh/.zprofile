@@ -39,10 +39,6 @@ else
   export EDITOR=vi
 fi
 
-if command -v ollama &>/dev/null; then
-  export OLLAMA_HOST="mintz:11434"
-fi
-
 if command -v go &>/dev/null; then
   export GOPATH=$(go env GOPATH)
   export PATH=$PATH:$GOPATH/bin
