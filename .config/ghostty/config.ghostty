@@ -1,0 +1,5 @@
+font-family = "JetBrainsMono NFM Bold"
+font-size = 14
+# theme = "tokyonight"
+theme = dark:TokyoNight,light:TokyoNight Day
+
