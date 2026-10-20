@@ -1,1 +1,1 @@
-
+figlet $(hostname) |lolcat
